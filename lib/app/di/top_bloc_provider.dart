@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/bloc/home_gallery_screen_bloc.dart';
 import 'package:igmur_images_example/presentation/features/splash/splash_bloc/splash_bloc.dart';
 import 'package:igmur_images_example/presentation/features/splash/splash_bloc/splash_event.dart';
 
@@ -19,6 +20,9 @@ class TopBlocProviders extends StatelessWidget {
             ..add(
               const SplashEvent.unSplashInNMilliseconds(3000),
             ),
+        ),
+        BlocProvider(
+          create: (context) => _getIt<HomeGalleryScreenBloc>(),
         ),
       ],
       child: child,

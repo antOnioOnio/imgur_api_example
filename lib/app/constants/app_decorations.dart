@@ -4,7 +4,7 @@ import 'package:igmur_images_example/app/constants/app_spacing.dart';
 
 abstract class AppDecorations {
   static BoxDecoration boxDecoration = BoxDecoration(
-    color: AppColors.onSurface,
+    color: AppColors.greyBackGround,
     borderRadius: BorderRadius.circular(AppSpacing.spaceSmall),
     boxShadow: [
       BoxShadow(

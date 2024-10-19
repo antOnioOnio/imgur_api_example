@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:igmur_images_example/presentation/features/home/home_screen.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/home_gallery_screen.dart';
 import 'package:igmur_images_example/presentation/features/splash/splash_controller.dart';
 
 List<GoRoute> appRoutes = [

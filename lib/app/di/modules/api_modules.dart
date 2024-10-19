@@ -7,12 +7,8 @@ void _apiModulesInit() {
     var dioClient = DioClient();
 
     dioClient.addInterceptors([
-      ...EnvironmentConfig.environment != 'prod'
-          ? [
-              CurlLoggerDioInterceptor(printOnSuccess: true),
-              HeadersInterceptor()
-            ]
-          : [],
+      HeadersInterceptor(),
+      CurlLoggerDioInterceptor(printOnSuccess: true),
     ]);
     dioClient.addBadCertificateCallBack();
 

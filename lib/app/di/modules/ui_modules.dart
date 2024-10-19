@@ -6,4 +6,9 @@ void _uiModulesInit() {
   uiModulesDi.registerFactory(
     () => SplashBloc(),
   );
+  uiModulesDi.registerFactory(
+    () => HomeGalleryScreenBloc(
+      repositoryContract: uiModulesDi(),
+    ),
+  );
 }
