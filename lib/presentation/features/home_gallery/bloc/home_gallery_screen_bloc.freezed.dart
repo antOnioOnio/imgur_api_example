@@ -333,6 +333,7 @@ abstract class _AddDataEntityToFavorites implements HomeGalleryScreenEvent {
 mixin _$HomeGalleryScreenState {
   ScreenStatus get screenStatus => throw _privateConstructorUsedError;
   List<DataEntity> get dataEntityList => throw _privateConstructorUsedError;
+  int get currentPage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeGalleryScreenStateCopyWith<HomeGalleryScreenState> get copyWith =>
@@ -345,7 +346,10 @@ abstract class $HomeGalleryScreenStateCopyWith<$Res> {
           $Res Function(HomeGalleryScreenState) then) =
       _$HomeGalleryScreenStateCopyWithImpl<$Res, HomeGalleryScreenState>;
   @useResult
-  $Res call({ScreenStatus screenStatus, List<DataEntity> dataEntityList});
+  $Res call(
+      {ScreenStatus screenStatus,
+      List<DataEntity> dataEntityList,
+      int currentPage});
 
   $ScreenStatusCopyWith<$Res> get screenStatus;
 }
@@ -366,6 +370,7 @@ class _$HomeGalleryScreenStateCopyWithImpl<$Res,
   $Res call({
     Object? screenStatus = null,
     Object? dataEntityList = null,
+    Object? currentPage = null,
   }) {
     return _then(_value.copyWith(
       screenStatus: null == screenStatus
@@ -376,6 +381,10 @@ class _$HomeGalleryScreenStateCopyWithImpl<$Res,
           ? _value.dataEntityList
           : dataEntityList // ignore: cast_nullable_to_non_nullable
               as List<DataEntity>,
+      currentPage: null == currentPage
+          ? _value.currentPage
+          : currentPage // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -397,7 +406,10 @@ abstract class _$$HomeGalleryScreenStateImplCopyWith<$Res>
       __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ScreenStatus screenStatus, List<DataEntity> dataEntityList});
+  $Res call(
+      {ScreenStatus screenStatus,
+      List<DataEntity> dataEntityList,
+      int currentPage});
 
   @override
   $ScreenStatusCopyWith<$Res> get screenStatus;
@@ -418,6 +430,7 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
   $Res call({
     Object? screenStatus = null,
     Object? dataEntityList = null,
+    Object? currentPage = null,
   }) {
     return _then(_$HomeGalleryScreenStateImpl(
       screenStatus: null == screenStatus
@@ -428,6 +441,10 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
           ? _value._dataEntityList
           : dataEntityList // ignore: cast_nullable_to_non_nullable
               as List<DataEntity>,
+      currentPage: null == currentPage
+          ? _value.currentPage
+          : currentPage // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -437,7 +454,8 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
 class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
   const _$HomeGalleryScreenStateImpl(
       {required this.screenStatus,
-      required final List<DataEntity> dataEntityList})
+      required final List<DataEntity> dataEntityList,
+      required this.currentPage})
       : _dataEntityList = dataEntityList;
 
   @override
@@ -451,8 +469,11 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
   }
 
   @override
+  final int currentPage;
+
+  @override
   String toString() {
-    return 'HomeGalleryScreenState(screenStatus: $screenStatus, dataEntityList: $dataEntityList)';
+    return 'HomeGalleryScreenState(screenStatus: $screenStatus, dataEntityList: $dataEntityList, currentPage: $currentPage)';
   }
 
   @override
@@ -463,12 +484,14 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
             (identical(other.screenStatus, screenStatus) ||
                 other.screenStatus == screenStatus) &&
             const DeepCollectionEquality()
-                .equals(other._dataEntityList, _dataEntityList));
+                .equals(other._dataEntityList, _dataEntityList) &&
+            (identical(other.currentPage, currentPage) ||
+                other.currentPage == currentPage));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, screenStatus,
-      const DeepCollectionEquality().hash(_dataEntityList));
+      const DeepCollectionEquality().hash(_dataEntityList), currentPage);
 
   @JsonKey(ignore: true)
   @override
@@ -480,14 +503,16 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
 
 abstract class _HomeGalleryScreenState implements HomeGalleryScreenState {
   const factory _HomeGalleryScreenState(
-          {required final ScreenStatus screenStatus,
-          required final List<DataEntity> dataEntityList}) =
-      _$HomeGalleryScreenStateImpl;
+      {required final ScreenStatus screenStatus,
+      required final List<DataEntity> dataEntityList,
+      required final int currentPage}) = _$HomeGalleryScreenStateImpl;
 
   @override
   ScreenStatus get screenStatus;
   @override
   List<DataEntity> get dataEntityList;
+  @override
+  int get currentPage;
   @override
   @JsonKey(ignore: true)
   _$$HomeGalleryScreenStateImplCopyWith<_$HomeGalleryScreenStateImpl>

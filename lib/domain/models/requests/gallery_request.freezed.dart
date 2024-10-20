@@ -173,27 +173,33 @@ class __$$GalleryRequestImplCopyWithImpl<$Res>
 
 class _$GalleryRequestImpl implements _GalleryRequest {
   const _$GalleryRequestImpl(
-      {required this.section,
-      required this.sort,
-      required this.window,
+      {this.section = 'hot',
+      this.sort = 'viral',
+      this.window = 'day',
       required this.page,
-      required this.showViral,
-      required this.mature,
-      required this.albumPreviews});
+      this.showViral = true,
+      this.mature = true,
+      this.albumPreviews = true});
 
   @override
+  @JsonKey()
   final String section;
   @override
+  @JsonKey()
   final String sort;
   @override
+  @JsonKey()
   final String window;
   @override
   final int page;
   @override
+  @JsonKey()
   final bool showViral;
   @override
+  @JsonKey()
   final bool mature;
   @override
+  @JsonKey()
   final bool albumPreviews;
 
   @override
@@ -231,13 +237,13 @@ class _$GalleryRequestImpl implements _GalleryRequest {
 
 abstract class _GalleryRequest implements GalleryRequest {
   const factory _GalleryRequest(
-      {required final String section,
-      required final String sort,
-      required final String window,
+      {final String section,
+      final String sort,
+      final String window,
       required final int page,
-      required final bool showViral,
-      required final bool mature,
-      required final bool albumPreviews}) = _$GalleryRequestImpl;
+      final bool showViral,
+      final bool mature,
+      final bool albumPreviews}) = _$GalleryRequestImpl;
 
   @override
   String get section;

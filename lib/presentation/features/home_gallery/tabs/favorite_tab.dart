@@ -4,17 +4,38 @@ import 'package:igmur_images_example/presentation/features/home_gallery/widgets/
 
 class FavoriteTab extends StatelessWidget {
   final List<DataEntity> favoriteImages;
+  final ScrollController scrollController;
 
-  const FavoriteTab({super.key, required this.favoriteImages});
+  const FavoriteTab({
+    super.key,
+    required this.favoriteImages,
+    required this.scrollController,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: ImageListTile(list: favoriteImages),
-        ),
-      ],
-    );
+    return favoriteImages.isEmpty
+        ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.image_not_supported,
+                  size: 80,
+                  color: Colors.grey,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'No favorites added yet',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              ],
+            ),
+          )
+        : Expanded(
+            child: ImageListTile(
+              list: favoriteImages,
+            ),
+          );
   }
 }

@@ -14,6 +14,8 @@ class ScreenStatus with _$ScreenStatus {
   /// Represents the success status of a screen.
   const factory ScreenStatus.success() = _Success;
 
+  const factory ScreenStatus.loadingMore() = _LoadingMore;
+
   /// Represents the error status of a screen.
   const factory ScreenStatus.error([String? error]) = _Error;
 }
@@ -24,4 +26,6 @@ extension ScreenStatusExtension on ScreenStatus {
   bool isLoading() => maybeWhen(orElse: () => false, loading: () => true);
 
   bool isError() => maybeWhen(orElse: () => false, error: (_) => true);
+
+  bool isLoadingMore() => maybeWhen(orElse: () => false, loadingMore: () => true);
 }

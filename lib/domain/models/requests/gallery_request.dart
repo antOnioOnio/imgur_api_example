@@ -5,12 +5,12 @@ part 'gallery_request.freezed.dart';
 @freezed
 class GalleryRequest with _$GalleryRequest {
   const factory GalleryRequest({
-    required String section,
-    required String sort,
-    required String window,
+    @Default('hot') String section,
+    @Default('viral') String sort,
+    @Default('day') String window,
     required int page,
-    required bool showViral,
-    required bool mature,
-    required bool albumPreviews,
+    @Default(true) bool showViral,
+    @Default(true) bool mature,
+    @Default(true) bool albumPreviews,
   }) = _GalleryRequest;
 }

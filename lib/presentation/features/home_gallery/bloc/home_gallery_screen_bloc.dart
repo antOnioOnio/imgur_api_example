@@ -37,17 +37,22 @@ class HomeGalleryScreenBloc
     HomeGalleryScreenEvent event,
     Emitter<HomeGalleryScreenState> emit,
   ) async {
-    emit(state.copyWith(screenStatus: const ScreenStatus.loading()));
+    if (state.screenStatus.isLoadingMore()) {
+      return;
+    }
+    int currentPage = state.currentPage + 1;
+    emit(
+      state.copyWith(
+        screenStatus: currentPage == 1
+            ? const ScreenStatus.loading()
+            : const ScreenStatus.loadingMore(),
+        currentPage: currentPage,
+      ),
+    );
 
     final data = await _repository.getGalleryImages(
-      request: const GalleryRequest(
-        section: 'hot',
-        sort: 'viral',
-        window: 'day',
-        page: 1,
-        showViral: true,
-        mature: true,
-        albumPreviews: false,
+      request: GalleryRequest(
+        page: currentPage,
       ),
     );
 

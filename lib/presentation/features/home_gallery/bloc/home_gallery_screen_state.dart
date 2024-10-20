@@ -5,12 +5,14 @@ class HomeGalleryScreenState with _$HomeGalleryScreenState {
   const factory HomeGalleryScreenState({
     required ScreenStatus screenStatus,
     required List<DataEntity> dataEntityList,
+    required int currentPage,
   }) = _HomeGalleryScreenState;
 
   factory HomeGalleryScreenState.initial() {
     return const HomeGalleryScreenState(
       screenStatus: ScreenStatus.initial(),
       dataEntityList: [],
+      currentPage: 0,
     );
   }
 }
