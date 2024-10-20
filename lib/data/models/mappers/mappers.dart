@@ -53,13 +53,13 @@ extension DataRemoteEntityX on DataRemoteEntity {
       imagesCount: imagesCount,
       inGallery: inGallery,
       isAd: isAd,
-      tags: tags.map((e) => e.toEntity()).toList(),
+      tags: tags?.map((e) => e.toEntity()).toList(),
       adType: adType,
       adUrl: adUrl,
       inMostViral: inMostViral,
       includeAlbumAds: includeAlbumAds,
-      images: images.map((e) => e.toEntity()).toList(),
-      adConfig: adConfig.toEntity(),
+      images: images?.map((e) => e.toEntity()).toList(),
+      adConfig: adConfig?.toEntity(),
     );
   }
 }
@@ -87,7 +87,7 @@ extension ImageRemoteEntityX on ImageRemoteEntity {
       isAd: isAd,
       inMostViral: inMostViral,
       hasSound: hasSound,
-      tags: tags.map((e) => e.toEntity()).toList(),
+      tags: tags?.map((e) => e.toEntity()).toList(),
       adType: adType,
       adUrl: adUrl,
       edited: edited,

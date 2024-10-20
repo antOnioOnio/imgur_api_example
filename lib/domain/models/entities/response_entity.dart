@@ -9,3 +9,15 @@ class ResponseEntity with _$ResponseEntity {
     required List<DataEntity> data,
   }) = _ResponseEntity;
 }
+
+extension ResponseEntityExtension on ResponseEntity {
+  List<DataEntity> filterOutAnimatedImages() {
+    return data
+        .where(
+          (dataEntity) =>
+              !(dataEntity.images?.any((image) => image.animated == true) ??
+                  false),
+        )
+        .toList();
+  }
+}

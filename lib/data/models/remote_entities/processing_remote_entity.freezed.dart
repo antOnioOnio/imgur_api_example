@@ -21,7 +21,7 @@ ProcessingRemoteEntity _$ProcessingRemoteEntityFromJson(
 
 /// @nodoc
 mixin _$ProcessingRemoteEntity {
-  String get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $ProcessingRemoteEntityCopyWith<$Res> {
           $Res Function(ProcessingRemoteEntity) then) =
       _$ProcessingRemoteEntityCopyWithImpl<$Res, ProcessingRemoteEntity>;
   @useResult
-  $Res call({String status});
+  $Res call({String? status});
 }
 
 /// @nodoc
@@ -52,13 +52,13 @@ class _$ProcessingRemoteEntityCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
   }) {
     return _then(_value.copyWith(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -72,7 +72,7 @@ abstract class _$$ProcessingRemoteEntityImplCopyWith<$Res>
       __$$ProcessingRemoteEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String status});
+  $Res call({String? status});
 }
 
 /// @nodoc
@@ -88,13 +88,13 @@ class __$$ProcessingRemoteEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
   }) {
     return _then(_$ProcessingRemoteEntityImpl(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -108,7 +108,7 @@ class _$ProcessingRemoteEntityImpl implements _ProcessingRemoteEntity {
       _$$ProcessingRemoteEntityImplFromJson(json);
 
   @override
-  final String status;
+  final String? status;
 
   @override
   String toString() {
@@ -143,14 +143,14 @@ class _$ProcessingRemoteEntityImpl implements _ProcessingRemoteEntity {
 }
 
 abstract class _ProcessingRemoteEntity implements ProcessingRemoteEntity {
-  factory _ProcessingRemoteEntity({required final String status}) =
+  factory _ProcessingRemoteEntity({required final String? status}) =
       _$ProcessingRemoteEntityImpl;
 
   factory _ProcessingRemoteEntity.fromJson(Map<String, dynamic> json) =
       _$ProcessingRemoteEntityImpl.fromJson;
 
   @override
-  String get status;
+  String? get status;
   @override
   @JsonKey(ignore: true)
   _$$ProcessingRemoteEntityImplCopyWith<_$ProcessingRemoteEntityImpl>

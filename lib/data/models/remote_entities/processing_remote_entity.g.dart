@@ -9,7 +9,7 @@ part of 'processing_remote_entity.dart';
 _$ProcessingRemoteEntityImpl _$$ProcessingRemoteEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$ProcessingRemoteEntityImpl(
-      status: json['status'] as String,
+      status: json['status'] as String?,
     );
 
 Map<String, dynamic> _$$ProcessingRemoteEntityImplToJson(

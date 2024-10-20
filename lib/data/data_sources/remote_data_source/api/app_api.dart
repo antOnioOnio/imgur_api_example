@@ -14,8 +14,8 @@ abstract class AppApi {
     @Path() String sort,
     @Path() String window,
     @Path() int page,
-    @Query("showViral") bool showViral,
-    @Query("mature") bool mature,
-    @Query("album_previews") bool albumPreviews,
+    @Query('showViral') bool showViral,
+    @Query('mature') bool mature,
+    @Query('album_previews') bool albumPreviews,
   );
 }

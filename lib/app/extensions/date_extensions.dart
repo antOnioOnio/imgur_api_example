@@ -5,4 +5,8 @@ extension DateTimeExtension on DateTime {
 
   String toddMMyyWithTimeFormat() =>
       DateFormat('dd/MM/yyyy hh:mm a').format(this);
+
+  static String fromMillisecondsToDateString(int milliseconds) {
+    return DateFormat.yMMMd().format(DateTime.fromMillisecondsSinceEpoch(milliseconds * 1000));
+  }
 }

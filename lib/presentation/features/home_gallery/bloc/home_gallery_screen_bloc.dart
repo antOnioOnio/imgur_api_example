@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:igmur_images_example/app/types/screen_status.dart';
+import 'package:igmur_images_example/domain/models/entities/data_entity.dart';
 import 'package:igmur_images_example/domain/models/requests/gallery_request.dart';
 import 'package:igmur_images_example/domain/repository_contracts/app_repository_contract.dart';
 
@@ -21,6 +22,13 @@ class HomeGalleryScreenBloc
     on<HomeGalleryScreenEvent>((event, emit) async {
       await event.when(
         fetchImages: () => _mapFetchImagesEventToState(event, emit),
+        handleFavoritePressed: (dataEntity) {
+          _mapHandleFavoritesEventToState(
+            event,
+            emit,
+            dataEntity,
+          );
+        },
       );
     });
   }
@@ -30,10 +38,10 @@ class HomeGalleryScreenBloc
     Emitter<HomeGalleryScreenState> emit,
   ) async {
     emit(state.copyWith(screenStatus: const ScreenStatus.loading()));
-    await Future.delayed(const Duration(seconds: 1));
+
     final data = await _repository.getGalleryImages(
       request: const GalleryRequest(
-        section: 'top',
+        section: 'hot',
         sort: 'viral',
         window: 'day',
         page: 1,
@@ -53,9 +61,30 @@ class HomeGalleryScreenBloc
         emit(
           state.copyWith(
             screenStatus: const ScreenStatus.success(),
+            dataEntityList: [...state.dataEntityList, ...value],
           ),
         );
       },
+    );
+  }
+
+  void _mapHandleFavoritesEventToState(
+    HomeGalleryScreenEvent event,
+    Emitter<HomeGalleryScreenState> emit,
+    DataEntity dataEntity,
+  ) {
+    final updatedList = state.dataEntityList.map((entity) {
+      if (entity == dataEntity) {
+        return entity.copyWith(favorite: !(dataEntity.favorite ?? false));
+      }
+
+      return entity;
+    }).toList();
+
+    emit(
+      state.copyWith(
+        dataEntityList: updatedList,
+      ),
     );
   }
 }

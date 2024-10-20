@@ -19,29 +19,29 @@ mixin _$ImageEntity {
   String get id => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get datetime => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
-  bool get animated => throw _privateConstructorUsedError;
-  int get width => throw _privateConstructorUsedError;
-  int get height => throw _privateConstructorUsedError;
-  int get size => throw _privateConstructorUsedError;
-  int get views => throw _privateConstructorUsedError;
-  int get bandwidth => throw _privateConstructorUsedError;
+  int? get datetime => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
+  bool? get animated => throw _privateConstructorUsedError;
+  int? get width => throw _privateConstructorUsedError;
+  int? get height => throw _privateConstructorUsedError;
+  int? get size => throw _privateConstructorUsedError;
+  int? get views => throw _privateConstructorUsedError;
+  int? get bandwidth => throw _privateConstructorUsedError;
   String? get vote => throw _privateConstructorUsedError;
-  bool get favorite => throw _privateConstructorUsedError;
+  bool? get favorite => throw _privateConstructorUsedError;
   bool? get nsfw => throw _privateConstructorUsedError;
   String? get section => throw _privateConstructorUsedError;
   String? get accountUrl => throw _privateConstructorUsedError;
   int? get accountId => throw _privateConstructorUsedError;
-  bool get isAd => throw _privateConstructorUsedError;
-  bool get inMostViral => throw _privateConstructorUsedError;
-  bool get hasSound => throw _privateConstructorUsedError;
-  List<TagEntity> get tags => throw _privateConstructorUsedError;
-  int get adType => throw _privateConstructorUsedError;
-  String get adUrl => throw _privateConstructorUsedError;
-  String get edited => throw _privateConstructorUsedError;
-  bool get inGallery => throw _privateConstructorUsedError;
-  String get link => throw _privateConstructorUsedError;
+  bool? get isAd => throw _privateConstructorUsedError;
+  bool? get inMostViral => throw _privateConstructorUsedError;
+  bool? get hasSound => throw _privateConstructorUsedError;
+  List<TagEntity>? get tags => throw _privateConstructorUsedError;
+  int? get adType => throw _privateConstructorUsedError;
+  String? get adUrl => throw _privateConstructorUsedError;
+  String? get edited => throw _privateConstructorUsedError;
+  bool? get inGallery => throw _privateConstructorUsedError;
+  String? get link => throw _privateConstructorUsedError;
   int? get mp4Size => throw _privateConstructorUsedError;
   String? get mp4 => throw _privateConstructorUsedError;
   String? get gifv => throw _privateConstructorUsedError;
@@ -69,29 +69,29 @@ abstract class $ImageEntityCopyWith<$Res> {
       {String id,
       String? title,
       String? description,
-      int datetime,
-      String type,
-      bool animated,
-      int width,
-      int height,
-      int size,
-      int views,
-      int bandwidth,
+      int? datetime,
+      String? type,
+      bool? animated,
+      int? width,
+      int? height,
+      int? size,
+      int? views,
+      int? bandwidth,
       String? vote,
-      bool favorite,
+      bool? favorite,
       bool? nsfw,
       String? section,
       String? accountUrl,
       int? accountId,
-      bool isAd,
-      bool inMostViral,
-      bool hasSound,
-      List<TagEntity> tags,
-      int adType,
-      String adUrl,
-      String edited,
-      bool inGallery,
-      String link,
+      bool? isAd,
+      bool? inMostViral,
+      bool? hasSound,
+      List<TagEntity>? tags,
+      int? adType,
+      String? adUrl,
+      String? edited,
+      bool? inGallery,
+      String? link,
       int? mp4Size,
       String? mp4,
       String? gifv,
@@ -123,29 +123,29 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
     Object? id = null,
     Object? title = freezed,
     Object? description = freezed,
-    Object? datetime = null,
-    Object? type = null,
-    Object? animated = null,
-    Object? width = null,
-    Object? height = null,
-    Object? size = null,
-    Object? views = null,
-    Object? bandwidth = null,
+    Object? datetime = freezed,
+    Object? type = freezed,
+    Object? animated = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? size = freezed,
+    Object? views = freezed,
+    Object? bandwidth = freezed,
     Object? vote = freezed,
-    Object? favorite = null,
+    Object? favorite = freezed,
     Object? nsfw = freezed,
     Object? section = freezed,
     Object? accountUrl = freezed,
     Object? accountId = freezed,
-    Object? isAd = null,
-    Object? inMostViral = null,
-    Object? hasSound = null,
-    Object? tags = null,
-    Object? adType = null,
-    Object? adUrl = null,
-    Object? edited = null,
-    Object? inGallery = null,
-    Object? link = null,
+    Object? isAd = freezed,
+    Object? inMostViral = freezed,
+    Object? hasSound = freezed,
+    Object? tags = freezed,
+    Object? adType = freezed,
+    Object? adUrl = freezed,
+    Object? edited = freezed,
+    Object? inGallery = freezed,
+    Object? link = freezed,
     Object? mp4Size = freezed,
     Object? mp4 = freezed,
     Object? gifv = freezed,
@@ -171,46 +171,46 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      datetime: null == datetime
+      datetime: freezed == datetime
           ? _value.datetime
           : datetime // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
+              as int?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      animated: null == animated
+              as String?,
+      animated: freezed == animated
           ? _value.animated
           : animated // ignore: cast_nullable_to_non_nullable
-              as bool,
-      width: null == width
+              as bool?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
-      size: null == size
+              as int?,
+      size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int,
-      views: null == views
+              as int?,
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as int,
-      bandwidth: null == bandwidth
+              as int?,
+      bandwidth: freezed == bandwidth
           ? _value.bandwidth
           : bandwidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vote: freezed == vote
           ? _value.vote
           : vote // ignore: cast_nullable_to_non_nullable
               as String?,
-      favorite: null == favorite
+      favorite: freezed == favorite
           ? _value.favorite
           : favorite // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
@@ -227,42 +227,42 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
               as int?,
-      isAd: null == isAd
+      isAd: freezed == isAd
           ? _value.isAd
           : isAd // ignore: cast_nullable_to_non_nullable
-              as bool,
-      inMostViral: null == inMostViral
+              as bool?,
+      inMostViral: freezed == inMostViral
           ? _value.inMostViral
           : inMostViral // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasSound: null == hasSound
+              as bool?,
+      hasSound: freezed == hasSound
           ? _value.hasSound
           : hasSound // ignore: cast_nullable_to_non_nullable
-              as bool,
-      tags: null == tags
+              as bool?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<TagEntity>,
-      adType: null == adType
+              as List<TagEntity>?,
+      adType: freezed == adType
           ? _value.adType
           : adType // ignore: cast_nullable_to_non_nullable
-              as int,
-      adUrl: null == adUrl
+              as int?,
+      adUrl: freezed == adUrl
           ? _value.adUrl
           : adUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      edited: null == edited
+              as String?,
+      edited: freezed == edited
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
-              as String,
-      inGallery: null == inGallery
+              as String?,
+      inGallery: freezed == inGallery
           ? _value.inGallery
           : inGallery // ignore: cast_nullable_to_non_nullable
-              as bool,
-      link: null == link
+              as bool?,
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       mp4Size: freezed == mp4Size
           ? _value.mp4Size
           : mp4Size // ignore: cast_nullable_to_non_nullable
@@ -335,29 +335,29 @@ abstract class _$$ImageEntityImplCopyWith<$Res>
       {String id,
       String? title,
       String? description,
-      int datetime,
-      String type,
-      bool animated,
-      int width,
-      int height,
-      int size,
-      int views,
-      int bandwidth,
+      int? datetime,
+      String? type,
+      bool? animated,
+      int? width,
+      int? height,
+      int? size,
+      int? views,
+      int? bandwidth,
       String? vote,
-      bool favorite,
+      bool? favorite,
       bool? nsfw,
       String? section,
       String? accountUrl,
       int? accountId,
-      bool isAd,
-      bool inMostViral,
-      bool hasSound,
-      List<TagEntity> tags,
-      int adType,
-      String adUrl,
-      String edited,
-      bool inGallery,
-      String link,
+      bool? isAd,
+      bool? inMostViral,
+      bool? hasSound,
+      List<TagEntity>? tags,
+      int? adType,
+      String? adUrl,
+      String? edited,
+      bool? inGallery,
+      String? link,
       int? mp4Size,
       String? mp4,
       String? gifv,
@@ -388,29 +388,29 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
     Object? id = null,
     Object? title = freezed,
     Object? description = freezed,
-    Object? datetime = null,
-    Object? type = null,
-    Object? animated = null,
-    Object? width = null,
-    Object? height = null,
-    Object? size = null,
-    Object? views = null,
-    Object? bandwidth = null,
+    Object? datetime = freezed,
+    Object? type = freezed,
+    Object? animated = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? size = freezed,
+    Object? views = freezed,
+    Object? bandwidth = freezed,
     Object? vote = freezed,
-    Object? favorite = null,
+    Object? favorite = freezed,
     Object? nsfw = freezed,
     Object? section = freezed,
     Object? accountUrl = freezed,
     Object? accountId = freezed,
-    Object? isAd = null,
-    Object? inMostViral = null,
-    Object? hasSound = null,
-    Object? tags = null,
-    Object? adType = null,
-    Object? adUrl = null,
-    Object? edited = null,
-    Object? inGallery = null,
-    Object? link = null,
+    Object? isAd = freezed,
+    Object? inMostViral = freezed,
+    Object? hasSound = freezed,
+    Object? tags = freezed,
+    Object? adType = freezed,
+    Object? adUrl = freezed,
+    Object? edited = freezed,
+    Object? inGallery = freezed,
+    Object? link = freezed,
     Object? mp4Size = freezed,
     Object? mp4 = freezed,
     Object? gifv = freezed,
@@ -436,46 +436,46 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      datetime: null == datetime
+      datetime: freezed == datetime
           ? _value.datetime
           : datetime // ignore: cast_nullable_to_non_nullable
-              as int,
-      type: null == type
+              as int?,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      animated: null == animated
+              as String?,
+      animated: freezed == animated
           ? _value.animated
           : animated // ignore: cast_nullable_to_non_nullable
-              as bool,
-      width: null == width
+              as bool?,
+      width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
+              as int?,
+      height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int,
-      size: null == size
+              as int?,
+      size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int,
-      views: null == views
+              as int?,
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as int,
-      bandwidth: null == bandwidth
+              as int?,
+      bandwidth: freezed == bandwidth
           ? _value.bandwidth
           : bandwidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vote: freezed == vote
           ? _value.vote
           : vote // ignore: cast_nullable_to_non_nullable
               as String?,
-      favorite: null == favorite
+      favorite: freezed == favorite
           ? _value.favorite
           : favorite // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
@@ -492,42 +492,42 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
               as int?,
-      isAd: null == isAd
+      isAd: freezed == isAd
           ? _value.isAd
           : isAd // ignore: cast_nullable_to_non_nullable
-              as bool,
-      inMostViral: null == inMostViral
+              as bool?,
+      inMostViral: freezed == inMostViral
           ? _value.inMostViral
           : inMostViral // ignore: cast_nullable_to_non_nullable
-              as bool,
-      hasSound: null == hasSound
+              as bool?,
+      hasSound: freezed == hasSound
           ? _value.hasSound
           : hasSound // ignore: cast_nullable_to_non_nullable
-              as bool,
-      tags: null == tags
+              as bool?,
+      tags: freezed == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<TagEntity>,
-      adType: null == adType
+              as List<TagEntity>?,
+      adType: freezed == adType
           ? _value.adType
           : adType // ignore: cast_nullable_to_non_nullable
-              as int,
-      adUrl: null == adUrl
+              as int?,
+      adUrl: freezed == adUrl
           ? _value.adUrl
           : adUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      edited: null == edited
+              as String?,
+      edited: freezed == edited
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
-              as String,
-      inGallery: null == inGallery
+              as String?,
+      inGallery: freezed == inGallery
           ? _value.inGallery
           : inGallery // ignore: cast_nullable_to_non_nullable
-              as bool,
-      link: null == link
+              as bool?,
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       mp4Size: freezed == mp4Size
           ? _value.mp4Size
           : mp4Size // ignore: cast_nullable_to_non_nullable
@@ -581,8 +581,8 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
 class _$ImageEntityImpl implements _ImageEntity {
   _$ImageEntityImpl(
       {required this.id,
-      this.title,
-      this.description,
+      required this.title,
+      required this.description,
       required this.datetime,
       required this.type,
       required this.animated,
@@ -591,32 +591,32 @@ class _$ImageEntityImpl implements _ImageEntity {
       required this.size,
       required this.views,
       required this.bandwidth,
-      this.vote,
+      required this.vote,
       required this.favorite,
-      this.nsfw,
-      this.section,
-      this.accountUrl,
-      this.accountId,
+      required this.nsfw,
+      required this.section,
+      required this.accountUrl,
+      required this.accountId,
       required this.isAd,
       required this.inMostViral,
       required this.hasSound,
-      required final List<TagEntity> tags,
+      required final List<TagEntity>? tags,
       required this.adType,
       required this.adUrl,
       required this.edited,
       required this.inGallery,
       required this.link,
-      this.mp4Size,
-      this.mp4,
-      this.gifv,
-      this.hls,
-      this.processing,
-      this.commentCount,
-      this.favoriteCount,
-      this.ups,
-      this.downs,
-      this.points,
-      this.score})
+      required this.mp4Size,
+      required this.mp4,
+      required this.gifv,
+      required this.hls,
+      required this.processing,
+      required this.commentCount,
+      required this.favoriteCount,
+      required this.ups,
+      required this.downs,
+      required this.points,
+      required this.score})
       : _tags = tags;
 
   @override
@@ -626,25 +626,25 @@ class _$ImageEntityImpl implements _ImageEntity {
   @override
   final String? description;
   @override
-  final int datetime;
+  final int? datetime;
   @override
-  final String type;
+  final String? type;
   @override
-  final bool animated;
+  final bool? animated;
   @override
-  final int width;
+  final int? width;
   @override
-  final int height;
+  final int? height;
   @override
-  final int size;
+  final int? size;
   @override
-  final int views;
+  final int? views;
   @override
-  final int bandwidth;
+  final int? bandwidth;
   @override
   final String? vote;
   @override
-  final bool favorite;
+  final bool? favorite;
   @override
   final bool? nsfw;
   @override
@@ -654,29 +654,31 @@ class _$ImageEntityImpl implements _ImageEntity {
   @override
   final int? accountId;
   @override
-  final bool isAd;
+  final bool? isAd;
   @override
-  final bool inMostViral;
+  final bool? inMostViral;
   @override
-  final bool hasSound;
-  final List<TagEntity> _tags;
+  final bool? hasSound;
+  final List<TagEntity>? _tags;
   @override
-  List<TagEntity> get tags {
+  List<TagEntity>? get tags {
+    final value = _tags;
+    if (value == null) return null;
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final int adType;
+  final int? adType;
   @override
-  final String adUrl;
+  final String? adUrl;
   @override
-  final String edited;
+  final String? edited;
   @override
-  final bool inGallery;
+  final bool? inGallery;
   @override
-  final String link;
+  final String? link;
   @override
   final int? mp4Size;
   @override
@@ -814,42 +816,42 @@ class _$ImageEntityImpl implements _ImageEntity {
 abstract class _ImageEntity implements ImageEntity {
   factory _ImageEntity(
       {required final String id,
-      final String? title,
-      final String? description,
-      required final int datetime,
-      required final String type,
-      required final bool animated,
-      required final int width,
-      required final int height,
-      required final int size,
-      required final int views,
-      required final int bandwidth,
-      final String? vote,
-      required final bool favorite,
-      final bool? nsfw,
-      final String? section,
-      final String? accountUrl,
-      final int? accountId,
-      required final bool isAd,
-      required final bool inMostViral,
-      required final bool hasSound,
-      required final List<TagEntity> tags,
-      required final int adType,
-      required final String adUrl,
-      required final String edited,
-      required final bool inGallery,
-      required final String link,
-      final int? mp4Size,
-      final String? mp4,
-      final String? gifv,
-      final String? hls,
-      final ProcessingEntity? processing,
-      final int? commentCount,
-      final int? favoriteCount,
-      final int? ups,
-      final int? downs,
-      final int? points,
-      final int? score}) = _$ImageEntityImpl;
+      required final String? title,
+      required final String? description,
+      required final int? datetime,
+      required final String? type,
+      required final bool? animated,
+      required final int? width,
+      required final int? height,
+      required final int? size,
+      required final int? views,
+      required final int? bandwidth,
+      required final String? vote,
+      required final bool? favorite,
+      required final bool? nsfw,
+      required final String? section,
+      required final String? accountUrl,
+      required final int? accountId,
+      required final bool? isAd,
+      required final bool? inMostViral,
+      required final bool? hasSound,
+      required final List<TagEntity>? tags,
+      required final int? adType,
+      required final String? adUrl,
+      required final String? edited,
+      required final bool? inGallery,
+      required final String? link,
+      required final int? mp4Size,
+      required final String? mp4,
+      required final String? gifv,
+      required final String? hls,
+      required final ProcessingEntity? processing,
+      required final int? commentCount,
+      required final int? favoriteCount,
+      required final int? ups,
+      required final int? downs,
+      required final int? points,
+      required final int? score}) = _$ImageEntityImpl;
 
   @override
   String get id;
@@ -858,25 +860,25 @@ abstract class _ImageEntity implements ImageEntity {
   @override
   String? get description;
   @override
-  int get datetime;
+  int? get datetime;
   @override
-  String get type;
+  String? get type;
   @override
-  bool get animated;
+  bool? get animated;
   @override
-  int get width;
+  int? get width;
   @override
-  int get height;
+  int? get height;
   @override
-  int get size;
+  int? get size;
   @override
-  int get views;
+  int? get views;
   @override
-  int get bandwidth;
+  int? get bandwidth;
   @override
   String? get vote;
   @override
-  bool get favorite;
+  bool? get favorite;
   @override
   bool? get nsfw;
   @override
@@ -886,23 +888,23 @@ abstract class _ImageEntity implements ImageEntity {
   @override
   int? get accountId;
   @override
-  bool get isAd;
+  bool? get isAd;
   @override
-  bool get inMostViral;
+  bool? get inMostViral;
   @override
-  bool get hasSound;
+  bool? get hasSound;
   @override
-  List<TagEntity> get tags;
+  List<TagEntity>? get tags;
   @override
-  int get adType;
+  int? get adType;
   @override
-  String get adUrl;
+  String? get adUrl;
   @override
-  String get edited;
+  String? get edited;
   @override
-  bool get inGallery;
+  bool? get inGallery;
   @override
-  String get link;
+  String? get link;
   @override
   int? get mp4Size;
   @override

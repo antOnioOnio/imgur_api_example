@@ -2,12 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:igmur_images_example/app/constants/app_colors.dart';
 import 'package:igmur_images_example/app/constants/app_fonts.dart';
 
-
 abstract class AppTheme {
   static double themeRadius = 12;
 
   static ThemeData theme() {
     return ThemeData(
+      tabBarTheme: const TabBarTheme(
+        labelColor: AppColors.black,
+        unselectedLabelColor: AppColors.greySoft,
+        labelStyle: AppFonts.headLine,
+        unselectedLabelStyle: AppFonts.headLine,
+        labelPadding: EdgeInsets.symmetric(horizontal: 16.0),
+        indicatorSize: TabBarIndicatorSize.label,
+        indicatorColor: AppColors.black,
+        tabAlignment: TabAlignment.center,
+        indicator: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: AppColors.black,
+              width: 2.0,
+            ),
+          ),
+        ),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           foregroundColor: AppColors.background,
@@ -44,7 +61,8 @@ abstract class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         floatingLabelBehavior: FloatingLabelBehavior.never,
         filled: true,
-        fillColor: AppColors.primary,
+        fillColor: AppColors.greyBackGround,
+        // Fondo gris
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(themeRadius),
           borderSide: BorderSide.none,
@@ -56,8 +74,9 @@ abstract class AppTheme {
             width: 2,
           ),
         ),
-        labelStyle: AppFonts.bodyText2,
-        hintStyle: AppFonts.bodyText2,
+        labelStyle: AppFonts.bodyText2.copyWith(color: Colors.grey[700]),
+        // Texto del label gris más oscuro
+        hintStyle: AppFonts.bodyText2.copyWith(color: Colors.grey[700]),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(themeRadius),
           borderSide: const BorderSide(

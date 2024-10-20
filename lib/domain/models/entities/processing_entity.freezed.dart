@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ProcessingEntity {
-  String get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProcessingEntityCopyWith<ProcessingEntity> get copyWith =>
@@ -29,7 +29,7 @@ abstract class $ProcessingEntityCopyWith<$Res> {
           ProcessingEntity value, $Res Function(ProcessingEntity) then) =
       _$ProcessingEntityCopyWithImpl<$Res, ProcessingEntity>;
   @useResult
-  $Res call({String status});
+  $Res call({String? status});
 }
 
 /// @nodoc
@@ -45,13 +45,13 @@ class _$ProcessingEntityCopyWithImpl<$Res, $Val extends ProcessingEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
   }) {
     return _then(_value.copyWith(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -64,7 +64,7 @@ abstract class _$$ProcessingEntityImplCopyWith<$Res>
       __$$ProcessingEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String status});
+  $Res call({String? status});
 }
 
 /// @nodoc
@@ -78,13 +78,13 @@ class __$$ProcessingEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
   }) {
     return _then(_$ProcessingEntityImpl(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -95,7 +95,7 @@ class _$ProcessingEntityImpl implements _ProcessingEntity {
   _$ProcessingEntityImpl({required this.status});
 
   @override
-  final String status;
+  final String? status;
 
   @override
   String toString() {
@@ -122,11 +122,11 @@ class _$ProcessingEntityImpl implements _ProcessingEntity {
 }
 
 abstract class _ProcessingEntity implements ProcessingEntity {
-  factory _ProcessingEntity({required final String status}) =
+  factory _ProcessingEntity({required final String? status}) =
       _$ProcessingEntityImpl;
 
   @override
-  String get status;
+  String? get status;
   @override
   @JsonKey(ignore: true)
   _$$ProcessingEntityImplCopyWith<_$ProcessingEntityImpl> get copyWith =>

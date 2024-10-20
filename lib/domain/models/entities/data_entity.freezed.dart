@@ -17,41 +17,41 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$DataEntity {
   String get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get datetime => throw _privateConstructorUsedError;
-  String get cover => throw _privateConstructorUsedError;
-  int get coverWidth => throw _privateConstructorUsedError;
-  int get coverHeight => throw _privateConstructorUsedError;
-  String get accountUrl => throw _privateConstructorUsedError;
-  int get accountId => throw _privateConstructorUsedError;
-  String get privacy => throw _privateConstructorUsedError;
-  String get layout => throw _privateConstructorUsedError;
-  int get views => throw _privateConstructorUsedError;
-  String get link => throw _privateConstructorUsedError;
-  int get ups => throw _privateConstructorUsedError;
-  int get downs => throw _privateConstructorUsedError;
-  int get points => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
-  bool get isAlbum => throw _privateConstructorUsedError;
+  int? get datetime => throw _privateConstructorUsedError;
+  String? get cover => throw _privateConstructorUsedError;
+  int? get coverWidth => throw _privateConstructorUsedError;
+  int? get coverHeight => throw _privateConstructorUsedError;
+  String? get accountUrl => throw _privateConstructorUsedError;
+  int? get accountId => throw _privateConstructorUsedError;
+  String? get privacy => throw _privateConstructorUsedError;
+  String? get layout => throw _privateConstructorUsedError;
+  int? get views => throw _privateConstructorUsedError;
+  String? get link => throw _privateConstructorUsedError;
+  int? get ups => throw _privateConstructorUsedError;
+  int? get downs => throw _privateConstructorUsedError;
+  int? get points => throw _privateConstructorUsedError;
+  int? get score => throw _privateConstructorUsedError;
+  bool? get isAlbum => throw _privateConstructorUsedError;
   String? get vote => throw _privateConstructorUsedError;
-  bool get favorite => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get favorite => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   String? get section => throw _privateConstructorUsedError;
-  int get commentCount => throw _privateConstructorUsedError;
-  int get favoriteCount => throw _privateConstructorUsedError;
+  int? get commentCount => throw _privateConstructorUsedError;
+  int? get favoriteCount => throw _privateConstructorUsedError;
   String? get topic => throw _privateConstructorUsedError;
   int? get topicId => throw _privateConstructorUsedError;
-  int get imagesCount => throw _privateConstructorUsedError;
-  bool get inGallery => throw _privateConstructorUsedError;
-  bool get isAd => throw _privateConstructorUsedError;
-  List<TagEntity> get tags => throw _privateConstructorUsedError;
-  int get adType => throw _privateConstructorUsedError;
-  String get adUrl => throw _privateConstructorUsedError;
-  bool get inMostViral => throw _privateConstructorUsedError;
-  bool get includeAlbumAds => throw _privateConstructorUsedError;
-  List<ImageEntity> get images => throw _privateConstructorUsedError;
-  AdConfigEntity get adConfig => throw _privateConstructorUsedError;
+  int? get imagesCount => throw _privateConstructorUsedError;
+  bool? get inGallery => throw _privateConstructorUsedError;
+  bool? get isAd => throw _privateConstructorUsedError;
+  List<TagEntity>? get tags => throw _privateConstructorUsedError;
+  int? get adType => throw _privateConstructorUsedError;
+  String? get adUrl => throw _privateConstructorUsedError;
+  bool? get inMostViral => throw _privateConstructorUsedError;
+  bool? get includeAlbumAds => throw _privateConstructorUsedError;
+  List<ImageEntity>? get images => throw _privateConstructorUsedError;
+  AdConfigEntity? get adConfig => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DataEntityCopyWith<DataEntity> get copyWith =>
@@ -66,43 +66,43 @@ abstract class $DataEntityCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      String title,
+      String? title,
       String? description,
-      int datetime,
-      String cover,
-      int coverWidth,
-      int coverHeight,
-      String accountUrl,
-      int accountId,
-      String privacy,
-      String layout,
-      int views,
-      String link,
-      int ups,
-      int downs,
-      int points,
-      int score,
-      bool isAlbum,
+      int? datetime,
+      String? cover,
+      int? coverWidth,
+      int? coverHeight,
+      String? accountUrl,
+      int? accountId,
+      String? privacy,
+      String? layout,
+      int? views,
+      String? link,
+      int? ups,
+      int? downs,
+      int? points,
+      int? score,
+      bool? isAlbum,
       String? vote,
-      bool favorite,
-      bool nsfw,
+      bool? favorite,
+      bool? nsfw,
       String? section,
-      int commentCount,
-      int favoriteCount,
+      int? commentCount,
+      int? favoriteCount,
       String? topic,
       int? topicId,
-      int imagesCount,
-      bool inGallery,
-      bool isAd,
-      List<TagEntity> tags,
-      int adType,
-      String adUrl,
-      bool inMostViral,
-      bool includeAlbumAds,
-      List<ImageEntity> images,
-      AdConfigEntity adConfig});
+      int? imagesCount,
+      bool? inGallery,
+      bool? isAd,
+      List<TagEntity>? tags,
+      int? adType,
+      String? adUrl,
+      bool? inMostViral,
+      bool? includeAlbumAds,
+      List<ImageEntity>? images,
+      AdConfigEntity? adConfig});
 
-  $AdConfigEntityCopyWith<$Res> get adConfig;
+  $AdConfigEntityCopyWith<$Res>? get adConfig;
 }
 
 /// @nodoc
@@ -119,139 +119,139 @@ class _$DataEntityCopyWithImpl<$Res, $Val extends DataEntity>
   @override
   $Res call({
     Object? id = null,
-    Object? title = null,
+    Object? title = freezed,
     Object? description = freezed,
-    Object? datetime = null,
-    Object? cover = null,
-    Object? coverWidth = null,
-    Object? coverHeight = null,
-    Object? accountUrl = null,
-    Object? accountId = null,
-    Object? privacy = null,
-    Object? layout = null,
-    Object? views = null,
-    Object? link = null,
-    Object? ups = null,
-    Object? downs = null,
-    Object? points = null,
-    Object? score = null,
-    Object? isAlbum = null,
+    Object? datetime = freezed,
+    Object? cover = freezed,
+    Object? coverWidth = freezed,
+    Object? coverHeight = freezed,
+    Object? accountUrl = freezed,
+    Object? accountId = freezed,
+    Object? privacy = freezed,
+    Object? layout = freezed,
+    Object? views = freezed,
+    Object? link = freezed,
+    Object? ups = freezed,
+    Object? downs = freezed,
+    Object? points = freezed,
+    Object? score = freezed,
+    Object? isAlbum = freezed,
     Object? vote = freezed,
-    Object? favorite = null,
-    Object? nsfw = null,
+    Object? favorite = freezed,
+    Object? nsfw = freezed,
     Object? section = freezed,
-    Object? commentCount = null,
-    Object? favoriteCount = null,
+    Object? commentCount = freezed,
+    Object? favoriteCount = freezed,
     Object? topic = freezed,
     Object? topicId = freezed,
-    Object? imagesCount = null,
-    Object? inGallery = null,
-    Object? isAd = null,
-    Object? tags = null,
-    Object? adType = null,
-    Object? adUrl = null,
-    Object? inMostViral = null,
-    Object? includeAlbumAds = null,
-    Object? images = null,
-    Object? adConfig = null,
+    Object? imagesCount = freezed,
+    Object? inGallery = freezed,
+    Object? isAd = freezed,
+    Object? tags = freezed,
+    Object? adType = freezed,
+    Object? adUrl = freezed,
+    Object? inMostViral = freezed,
+    Object? includeAlbumAds = freezed,
+    Object? images = freezed,
+    Object? adConfig = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      datetime: null == datetime
+      datetime: freezed == datetime
           ? _value.datetime
           : datetime // ignore: cast_nullable_to_non_nullable
-              as int,
-      cover: null == cover
+              as int?,
+      cover: freezed == cover
           ? _value.cover
           : cover // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverWidth: null == coverWidth
+              as String?,
+      coverWidth: freezed == coverWidth
           ? _value.coverWidth
           : coverWidth // ignore: cast_nullable_to_non_nullable
-              as int,
-      coverHeight: null == coverHeight
+              as int?,
+      coverHeight: freezed == coverHeight
           ? _value.coverHeight
           : coverHeight // ignore: cast_nullable_to_non_nullable
-              as int,
-      accountUrl: null == accountUrl
+              as int?,
+      accountUrl: freezed == accountUrl
           ? _value.accountUrl
           : accountUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountId: null == accountId
+              as String?,
+      accountId: freezed == accountId
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
-              as int,
-      privacy: null == privacy
+              as int?,
+      privacy: freezed == privacy
           ? _value.privacy
           : privacy // ignore: cast_nullable_to_non_nullable
-              as String,
-      layout: null == layout
+              as String?,
+      layout: freezed == layout
           ? _value.layout
           : layout // ignore: cast_nullable_to_non_nullable
-              as String,
-      views: null == views
+              as String?,
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as int,
-      link: null == link
+              as int?,
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
-      ups: null == ups
+              as String?,
+      ups: freezed == ups
           ? _value.ups
           : ups // ignore: cast_nullable_to_non_nullable
-              as int,
-      downs: null == downs
+              as int?,
+      downs: freezed == downs
           ? _value.downs
           : downs // ignore: cast_nullable_to_non_nullable
-              as int,
-      points: null == points
+              as int?,
+      points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as int,
-      score: null == score
+              as int?,
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
-      isAlbum: null == isAlbum
+              as int?,
+      isAlbum: freezed == isAlbum
           ? _value.isAlbum
           : isAlbum // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       vote: freezed == vote
           ? _value.vote
           : vote // ignore: cast_nullable_to_non_nullable
               as String?,
-      favorite: null == favorite
+      favorite: freezed == favorite
           ? _value.favorite
           : favorite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
+              as bool?,
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       section: freezed == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as String?,
-      commentCount: null == commentCount
+      commentCount: freezed == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      favoriteCount: null == favoriteCount
+              as int?,
+      favoriteCount: freezed == favoriteCount
           ? _value.favoriteCount
           : favoriteCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
@@ -260,53 +260,57 @@ class _$DataEntityCopyWithImpl<$Res, $Val extends DataEntity>
           ? _value.topicId
           : topicId // ignore: cast_nullable_to_non_nullable
               as int?,
-      imagesCount: null == imagesCount
+      imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      inGallery: null == inGallery
+              as int?,
+      inGallery: freezed == inGallery
           ? _value.inGallery
           : inGallery // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAd: null == isAd
+              as bool?,
+      isAd: freezed == isAd
           ? _value.isAd
           : isAd // ignore: cast_nullable_to_non_nullable
-              as bool,
-      tags: null == tags
+              as bool?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<TagEntity>,
-      adType: null == adType
+              as List<TagEntity>?,
+      adType: freezed == adType
           ? _value.adType
           : adType // ignore: cast_nullable_to_non_nullable
-              as int,
-      adUrl: null == adUrl
+              as int?,
+      adUrl: freezed == adUrl
           ? _value.adUrl
           : adUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      inMostViral: null == inMostViral
+              as String?,
+      inMostViral: freezed == inMostViral
           ? _value.inMostViral
           : inMostViral // ignore: cast_nullable_to_non_nullable
-              as bool,
-      includeAlbumAds: null == includeAlbumAds
+              as bool?,
+      includeAlbumAds: freezed == includeAlbumAds
           ? _value.includeAlbumAds
           : includeAlbumAds // ignore: cast_nullable_to_non_nullable
-              as bool,
-      images: null == images
+              as bool?,
+      images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<ImageEntity>,
-      adConfig: null == adConfig
+              as List<ImageEntity>?,
+      adConfig: freezed == adConfig
           ? _value.adConfig
           : adConfig // ignore: cast_nullable_to_non_nullable
-              as AdConfigEntity,
+              as AdConfigEntity?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AdConfigEntityCopyWith<$Res> get adConfig {
-    return $AdConfigEntityCopyWith<$Res>(_value.adConfig, (value) {
+  $AdConfigEntityCopyWith<$Res>? get adConfig {
+    if (_value.adConfig == null) {
+      return null;
+    }
+
+    return $AdConfigEntityCopyWith<$Res>(_value.adConfig!, (value) {
       return _then(_value.copyWith(adConfig: value) as $Val);
     });
   }
@@ -322,44 +326,44 @@ abstract class _$$DataEntityImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      String title,
+      String? title,
       String? description,
-      int datetime,
-      String cover,
-      int coverWidth,
-      int coverHeight,
-      String accountUrl,
-      int accountId,
-      String privacy,
-      String layout,
-      int views,
-      String link,
-      int ups,
-      int downs,
-      int points,
-      int score,
-      bool isAlbum,
+      int? datetime,
+      String? cover,
+      int? coverWidth,
+      int? coverHeight,
+      String? accountUrl,
+      int? accountId,
+      String? privacy,
+      String? layout,
+      int? views,
+      String? link,
+      int? ups,
+      int? downs,
+      int? points,
+      int? score,
+      bool? isAlbum,
       String? vote,
-      bool favorite,
-      bool nsfw,
+      bool? favorite,
+      bool? nsfw,
       String? section,
-      int commentCount,
-      int favoriteCount,
+      int? commentCount,
+      int? favoriteCount,
       String? topic,
       int? topicId,
-      int imagesCount,
-      bool inGallery,
-      bool isAd,
-      List<TagEntity> tags,
-      int adType,
-      String adUrl,
-      bool inMostViral,
-      bool includeAlbumAds,
-      List<ImageEntity> images,
-      AdConfigEntity adConfig});
+      int? imagesCount,
+      bool? inGallery,
+      bool? isAd,
+      List<TagEntity>? tags,
+      int? adType,
+      String? adUrl,
+      bool? inMostViral,
+      bool? includeAlbumAds,
+      List<ImageEntity>? images,
+      AdConfigEntity? adConfig});
 
   @override
-  $AdConfigEntityCopyWith<$Res> get adConfig;
+  $AdConfigEntityCopyWith<$Res>? get adConfig;
 }
 
 /// @nodoc
@@ -374,139 +378,139 @@ class __$$DataEntityImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? title = null,
+    Object? title = freezed,
     Object? description = freezed,
-    Object? datetime = null,
-    Object? cover = null,
-    Object? coverWidth = null,
-    Object? coverHeight = null,
-    Object? accountUrl = null,
-    Object? accountId = null,
-    Object? privacy = null,
-    Object? layout = null,
-    Object? views = null,
-    Object? link = null,
-    Object? ups = null,
-    Object? downs = null,
-    Object? points = null,
-    Object? score = null,
-    Object? isAlbum = null,
+    Object? datetime = freezed,
+    Object? cover = freezed,
+    Object? coverWidth = freezed,
+    Object? coverHeight = freezed,
+    Object? accountUrl = freezed,
+    Object? accountId = freezed,
+    Object? privacy = freezed,
+    Object? layout = freezed,
+    Object? views = freezed,
+    Object? link = freezed,
+    Object? ups = freezed,
+    Object? downs = freezed,
+    Object? points = freezed,
+    Object? score = freezed,
+    Object? isAlbum = freezed,
     Object? vote = freezed,
-    Object? favorite = null,
-    Object? nsfw = null,
+    Object? favorite = freezed,
+    Object? nsfw = freezed,
     Object? section = freezed,
-    Object? commentCount = null,
-    Object? favoriteCount = null,
+    Object? commentCount = freezed,
+    Object? favoriteCount = freezed,
     Object? topic = freezed,
     Object? topicId = freezed,
-    Object? imagesCount = null,
-    Object? inGallery = null,
-    Object? isAd = null,
-    Object? tags = null,
-    Object? adType = null,
-    Object? adUrl = null,
-    Object? inMostViral = null,
-    Object? includeAlbumAds = null,
-    Object? images = null,
-    Object? adConfig = null,
+    Object? imagesCount = freezed,
+    Object? inGallery = freezed,
+    Object? isAd = freezed,
+    Object? tags = freezed,
+    Object? adType = freezed,
+    Object? adUrl = freezed,
+    Object? inMostViral = freezed,
+    Object? includeAlbumAds = freezed,
+    Object? images = freezed,
+    Object? adConfig = freezed,
   }) {
     return _then(_$DataEntityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      title: null == title
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      datetime: null == datetime
+      datetime: freezed == datetime
           ? _value.datetime
           : datetime // ignore: cast_nullable_to_non_nullable
-              as int,
-      cover: null == cover
+              as int?,
+      cover: freezed == cover
           ? _value.cover
           : cover // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverWidth: null == coverWidth
+              as String?,
+      coverWidth: freezed == coverWidth
           ? _value.coverWidth
           : coverWidth // ignore: cast_nullable_to_non_nullable
-              as int,
-      coverHeight: null == coverHeight
+              as int?,
+      coverHeight: freezed == coverHeight
           ? _value.coverHeight
           : coverHeight // ignore: cast_nullable_to_non_nullable
-              as int,
-      accountUrl: null == accountUrl
+              as int?,
+      accountUrl: freezed == accountUrl
           ? _value.accountUrl
           : accountUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      accountId: null == accountId
+              as String?,
+      accountId: freezed == accountId
           ? _value.accountId
           : accountId // ignore: cast_nullable_to_non_nullable
-              as int,
-      privacy: null == privacy
+              as int?,
+      privacy: freezed == privacy
           ? _value.privacy
           : privacy // ignore: cast_nullable_to_non_nullable
-              as String,
-      layout: null == layout
+              as String?,
+      layout: freezed == layout
           ? _value.layout
           : layout // ignore: cast_nullable_to_non_nullable
-              as String,
-      views: null == views
+              as String?,
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as int,
-      link: null == link
+              as int?,
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
-      ups: null == ups
+              as String?,
+      ups: freezed == ups
           ? _value.ups
           : ups // ignore: cast_nullable_to_non_nullable
-              as int,
-      downs: null == downs
+              as int?,
+      downs: freezed == downs
           ? _value.downs
           : downs // ignore: cast_nullable_to_non_nullable
-              as int,
-      points: null == points
+              as int?,
+      points: freezed == points
           ? _value.points
           : points // ignore: cast_nullable_to_non_nullable
-              as int,
-      score: null == score
+              as int?,
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as int,
-      isAlbum: null == isAlbum
+              as int?,
+      isAlbum: freezed == isAlbum
           ? _value.isAlbum
           : isAlbum // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       vote: freezed == vote
           ? _value.vote
           : vote // ignore: cast_nullable_to_non_nullable
               as String?,
-      favorite: null == favorite
+      favorite: freezed == favorite
           ? _value.favorite
           : favorite // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
+              as bool?,
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       section: freezed == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as String?,
-      commentCount: null == commentCount
+      commentCount: freezed == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      favoriteCount: null == favoriteCount
+              as int?,
+      favoriteCount: freezed == favoriteCount
           ? _value.favoriteCount
           : favoriteCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
@@ -515,46 +519,46 @@ class __$$DataEntityImplCopyWithImpl<$Res>
           ? _value.topicId
           : topicId // ignore: cast_nullable_to_non_nullable
               as int?,
-      imagesCount: null == imagesCount
+      imagesCount: freezed == imagesCount
           ? _value.imagesCount
           : imagesCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      inGallery: null == inGallery
+              as int?,
+      inGallery: freezed == inGallery
           ? _value.inGallery
           : inGallery // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAd: null == isAd
+              as bool?,
+      isAd: freezed == isAd
           ? _value.isAd
           : isAd // ignore: cast_nullable_to_non_nullable
-              as bool,
-      tags: null == tags
+              as bool?,
+      tags: freezed == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<TagEntity>,
-      adType: null == adType
+              as List<TagEntity>?,
+      adType: freezed == adType
           ? _value.adType
           : adType // ignore: cast_nullable_to_non_nullable
-              as int,
-      adUrl: null == adUrl
+              as int?,
+      adUrl: freezed == adUrl
           ? _value.adUrl
           : adUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      inMostViral: null == inMostViral
+              as String?,
+      inMostViral: freezed == inMostViral
           ? _value.inMostViral
           : inMostViral // ignore: cast_nullable_to_non_nullable
-              as bool,
-      includeAlbumAds: null == includeAlbumAds
+              as bool?,
+      includeAlbumAds: freezed == includeAlbumAds
           ? _value.includeAlbumAds
           : includeAlbumAds // ignore: cast_nullable_to_non_nullable
-              as bool,
-      images: null == images
+              as bool?,
+      images: freezed == images
           ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<ImageEntity>,
-      adConfig: null == adConfig
+              as List<ImageEntity>?,
+      adConfig: freezed == adConfig
           ? _value.adConfig
           : adConfig // ignore: cast_nullable_to_non_nullable
-              as AdConfigEntity,
+              as AdConfigEntity?,
     ));
   }
 }
@@ -565,7 +569,7 @@ class _$DataEntityImpl implements _DataEntity {
   _$DataEntityImpl(
       {required this.id,
       required this.title,
-      this.description,
+      required this.description,
       required this.datetime,
       required this.cover,
       required this.coverWidth,
@@ -581,23 +585,23 @@ class _$DataEntityImpl implements _DataEntity {
       required this.points,
       required this.score,
       required this.isAlbum,
-      this.vote,
+      required this.vote,
       required this.favorite,
       required this.nsfw,
-      this.section,
+      required this.section,
       required this.commentCount,
       required this.favoriteCount,
-      this.topic,
-      this.topicId,
+      required this.topic,
+      required this.topicId,
       required this.imagesCount,
       required this.inGallery,
       required this.isAd,
-      required final List<TagEntity> tags,
+      required final List<TagEntity>? tags,
       required this.adType,
       required this.adUrl,
       required this.inMostViral,
       required this.includeAlbumAds,
-      required final List<ImageEntity> images,
+      required final List<ImageEntity>? images,
       required this.adConfig})
       : _tags = tags,
         _images = images;
@@ -605,87 +609,91 @@ class _$DataEntityImpl implements _DataEntity {
   @override
   final String id;
   @override
-  final String title;
+  final String? title;
   @override
   final String? description;
   @override
-  final int datetime;
+  final int? datetime;
   @override
-  final String cover;
+  final String? cover;
   @override
-  final int coverWidth;
+  final int? coverWidth;
   @override
-  final int coverHeight;
+  final int? coverHeight;
   @override
-  final String accountUrl;
+  final String? accountUrl;
   @override
-  final int accountId;
+  final int? accountId;
   @override
-  final String privacy;
+  final String? privacy;
   @override
-  final String layout;
+  final String? layout;
   @override
-  final int views;
+  final int? views;
   @override
-  final String link;
+  final String? link;
   @override
-  final int ups;
+  final int? ups;
   @override
-  final int downs;
+  final int? downs;
   @override
-  final int points;
+  final int? points;
   @override
-  final int score;
+  final int? score;
   @override
-  final bool isAlbum;
+  final bool? isAlbum;
   @override
   final String? vote;
   @override
-  final bool favorite;
+  final bool? favorite;
   @override
-  final bool nsfw;
+  final bool? nsfw;
   @override
   final String? section;
   @override
-  final int commentCount;
+  final int? commentCount;
   @override
-  final int favoriteCount;
+  final int? favoriteCount;
   @override
   final String? topic;
   @override
   final int? topicId;
   @override
-  final int imagesCount;
+  final int? imagesCount;
   @override
-  final bool inGallery;
+  final bool? inGallery;
   @override
-  final bool isAd;
-  final List<TagEntity> _tags;
+  final bool? isAd;
+  final List<TagEntity>? _tags;
   @override
-  List<TagEntity> get tags {
+  List<TagEntity>? get tags {
+    final value = _tags;
+    if (value == null) return null;
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final int adType;
+  final int? adType;
   @override
-  final String adUrl;
+  final String? adUrl;
   @override
-  final bool inMostViral;
+  final bool? inMostViral;
   @override
-  final bool includeAlbumAds;
-  final List<ImageEntity> _images;
+  final bool? includeAlbumAds;
+  final List<ImageEntity>? _images;
   @override
-  List<ImageEntity> get images {
+  List<ImageEntity>? get images {
+    final value = _images;
+    if (value == null) return null;
     if (_images is EqualUnmodifiableListView) return _images;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_images);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final AdConfigEntity adConfig;
+  final AdConfigEntity? adConfig;
 
   @override
   String toString() {
@@ -800,114 +808,114 @@ class _$DataEntityImpl implements _DataEntity {
 abstract class _DataEntity implements DataEntity {
   factory _DataEntity(
       {required final String id,
-      required final String title,
-      final String? description,
-      required final int datetime,
-      required final String cover,
-      required final int coverWidth,
-      required final int coverHeight,
-      required final String accountUrl,
-      required final int accountId,
-      required final String privacy,
-      required final String layout,
-      required final int views,
-      required final String link,
-      required final int ups,
-      required final int downs,
-      required final int points,
-      required final int score,
-      required final bool isAlbum,
-      final String? vote,
-      required final bool favorite,
-      required final bool nsfw,
-      final String? section,
-      required final int commentCount,
-      required final int favoriteCount,
-      final String? topic,
-      final int? topicId,
-      required final int imagesCount,
-      required final bool inGallery,
-      required final bool isAd,
-      required final List<TagEntity> tags,
-      required final int adType,
-      required final String adUrl,
-      required final bool inMostViral,
-      required final bool includeAlbumAds,
-      required final List<ImageEntity> images,
-      required final AdConfigEntity adConfig}) = _$DataEntityImpl;
+      required final String? title,
+      required final String? description,
+      required final int? datetime,
+      required final String? cover,
+      required final int? coverWidth,
+      required final int? coverHeight,
+      required final String? accountUrl,
+      required final int? accountId,
+      required final String? privacy,
+      required final String? layout,
+      required final int? views,
+      required final String? link,
+      required final int? ups,
+      required final int? downs,
+      required final int? points,
+      required final int? score,
+      required final bool? isAlbum,
+      required final String? vote,
+      required final bool? favorite,
+      required final bool? nsfw,
+      required final String? section,
+      required final int? commentCount,
+      required final int? favoriteCount,
+      required final String? topic,
+      required final int? topicId,
+      required final int? imagesCount,
+      required final bool? inGallery,
+      required final bool? isAd,
+      required final List<TagEntity>? tags,
+      required final int? adType,
+      required final String? adUrl,
+      required final bool? inMostViral,
+      required final bool? includeAlbumAds,
+      required final List<ImageEntity>? images,
+      required final AdConfigEntity? adConfig}) = _$DataEntityImpl;
 
   @override
   String get id;
   @override
-  String get title;
+  String? get title;
   @override
   String? get description;
   @override
-  int get datetime;
+  int? get datetime;
   @override
-  String get cover;
+  String? get cover;
   @override
-  int get coverWidth;
+  int? get coverWidth;
   @override
-  int get coverHeight;
+  int? get coverHeight;
   @override
-  String get accountUrl;
+  String? get accountUrl;
   @override
-  int get accountId;
+  int? get accountId;
   @override
-  String get privacy;
+  String? get privacy;
   @override
-  String get layout;
+  String? get layout;
   @override
-  int get views;
+  int? get views;
   @override
-  String get link;
+  String? get link;
   @override
-  int get ups;
+  int? get ups;
   @override
-  int get downs;
+  int? get downs;
   @override
-  int get points;
+  int? get points;
   @override
-  int get score;
+  int? get score;
   @override
-  bool get isAlbum;
+  bool? get isAlbum;
   @override
   String? get vote;
   @override
-  bool get favorite;
+  bool? get favorite;
   @override
-  bool get nsfw;
+  bool? get nsfw;
   @override
   String? get section;
   @override
-  int get commentCount;
+  int? get commentCount;
   @override
-  int get favoriteCount;
+  int? get favoriteCount;
   @override
   String? get topic;
   @override
   int? get topicId;
   @override
-  int get imagesCount;
+  int? get imagesCount;
   @override
-  bool get inGallery;
+  bool? get inGallery;
   @override
-  bool get isAd;
+  bool? get isAd;
   @override
-  List<TagEntity> get tags;
+  List<TagEntity>? get tags;
   @override
-  int get adType;
+  int? get adType;
   @override
-  String get adUrl;
+  String? get adUrl;
   @override
-  bool get inMostViral;
+  bool? get inMostViral;
   @override
-  bool get includeAlbumAds;
+  bool? get includeAlbumAds;
   @override
-  List<ImageEntity> get images;
+  List<ImageEntity>? get images;
   @override
-  AdConfigEntity get adConfig;
+  AdConfigEntity? get adConfig;
   @override
   @JsonKey(ignore: true)
   _$$DataEntityImplCopyWith<_$DataEntityImpl> get copyWith =>

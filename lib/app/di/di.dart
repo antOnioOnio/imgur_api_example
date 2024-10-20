@@ -1,5 +1,4 @@
 import 'package:get_it/get_it.dart';
-import 'package:igmur_images_example/app/config/environment_config.dart';
 import 'package:igmur_images_example/app/constants/app_urls.dart';
 import 'package:igmur_images_example/data/data_sources/remote_data_source/api/app_api.dart';
 import 'package:igmur_images_example/data/data_sources/remote_data_source/api/network/dio_http_client.dart';

@@ -10,46 +10,48 @@ _$DataRemoteEntityImpl _$$DataRemoteEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$DataRemoteEntityImpl(
       id: json['id'] as String,
-      title: json['title'] as String,
+      title: json['title'] as String?,
       description: json['description'] as String?,
-      datetime: (json['datetime'] as num).toInt(),
-      cover: json['cover'] as String,
-      coverWidth: (json['coverWidth'] as num).toInt(),
-      coverHeight: (json['coverHeight'] as num).toInt(),
-      accountUrl: json['accountUrl'] as String,
-      accountId: (json['accountId'] as num).toInt(),
-      privacy: json['privacy'] as String,
-      layout: json['layout'] as String,
-      views: (json['views'] as num).toInt(),
-      link: json['link'] as String,
-      ups: (json['ups'] as num).toInt(),
-      downs: (json['downs'] as num).toInt(),
-      points: (json['points'] as num).toInt(),
-      score: (json['score'] as num).toInt(),
-      isAlbum: json['isAlbum'] as bool,
+      datetime: (json['datetime'] as num?)?.toInt(),
+      cover: json['cover'] as String?,
+      coverWidth: (json['coverWidth'] as num?)?.toInt(),
+      coverHeight: (json['coverHeight'] as num?)?.toInt(),
+      accountUrl: json['accountUrl'] as String?,
+      accountId: (json['accountId'] as num?)?.toInt(),
+      privacy: json['privacy'] as String?,
+      layout: json['layout'] as String?,
+      views: (json['views'] as num?)?.toInt(),
+      link: json['link'] as String?,
+      ups: (json['ups'] as num?)?.toInt(),
+      downs: (json['downs'] as num?)?.toInt(),
+      points: (json['points'] as num?)?.toInt(),
+      score: (json['score'] as num?)?.toInt(),
+      isAlbum: json['isAlbum'] as bool?,
       vote: json['vote'] as String?,
-      favorite: json['favorite'] as bool,
-      nsfw: json['nsfw'] as bool,
+      favorite: json['favorite'] as bool?,
+      nsfw: json['nsfw'] as bool?,
       section: json['section'] as String?,
-      commentCount: (json['commentCount'] as num).toInt(),
-      favoriteCount: (json['favoriteCount'] as num).toInt(),
+      commentCount: (json['commentCount'] as num?)?.toInt(),
+      favoriteCount: (json['favoriteCount'] as num?)?.toInt(),
       topic: json['topic'] as String?,
       topicId: (json['topicId'] as num?)?.toInt(),
-      imagesCount: (json['imagesCount'] as num).toInt(),
-      inGallery: json['inGallery'] as bool,
-      isAd: json['isAd'] as bool,
-      tags: (json['tags'] as List<dynamic>)
-          .map((e) => TagRemoteEntity.fromJson(e as Map<String, dynamic>))
+      imagesCount: (json['imagesCount'] as num?)?.toInt(),
+      inGallery: json['inGallery'] as bool?,
+      isAd: json['isAd'] as bool?,
+      tags: (json['tags'] as List<dynamic>?)
+          ?.map((e) => TagRemoteEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
-      adType: (json['adType'] as num).toInt(),
-      adUrl: json['adUrl'] as String,
-      inMostViral: json['inMostViral'] as bool,
-      includeAlbumAds: json['includeAlbumAds'] as bool,
-      images: (json['images'] as List<dynamic>)
-          .map((e) => ImageRemoteEntity.fromJson(e as Map<String, dynamic>))
+      adType: (json['adType'] as num?)?.toInt(),
+      adUrl: json['adUrl'] as String?,
+      inMostViral: json['inMostViral'] as bool?,
+      includeAlbumAds: json['includeAlbumAds'] as bool?,
+      images: (json['images'] as List<dynamic>?)
+          ?.map((e) => ImageRemoteEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
-      adConfig: AdConfigRemoteEntity.fromJson(
-          json['adConfig'] as Map<String, dynamic>),
+      adConfig: json['adConfig'] == null
+          ? null
+          : AdConfigRemoteEntity.fromJson(
+              json['adConfig'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$DataRemoteEntityImplToJson(

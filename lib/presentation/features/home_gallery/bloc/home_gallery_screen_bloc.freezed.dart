@@ -19,32 +19,39 @@ mixin _$HomeGalleryScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchImages,
+    required TResult Function(DataEntity dataEntity) handleFavoritePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchImages,
+    TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchImages,
+    TResult Function(DataEntity dataEntity)? handleFavoritePressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchImages value) fetchImages,
+    required TResult Function(_AddDataEntityToFavorites value)
+        handleFavoritePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchImages value)? fetchImages,
+    TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchImages value)? fetchImages,
+    TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -108,6 +115,7 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchImages,
+    required TResult Function(DataEntity dataEntity) handleFavoritePressed,
   }) {
     return fetchImages();
   }
@@ -116,6 +124,7 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchImages,
+    TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
   }) {
     return fetchImages?.call();
   }
@@ -124,6 +133,7 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchImages,
+    TResult Function(DataEntity dataEntity)? handleFavoritePressed,
     required TResult orElse(),
   }) {
     if (fetchImages != null) {
@@ -136,6 +146,8 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchImages value) fetchImages,
+    required TResult Function(_AddDataEntityToFavorites value)
+        handleFavoritePressed,
   }) {
     return fetchImages(this);
   }
@@ -144,6 +156,7 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchImages value)? fetchImages,
+    TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
   }) {
     return fetchImages?.call(this);
   }
@@ -152,6 +165,7 @@ class _$FetchImagesImpl implements _FetchImages {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchImages value)? fetchImages,
+    TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
     required TResult orElse(),
   }) {
     if (fetchImages != null) {
@@ -166,8 +180,159 @@ abstract class _FetchImages implements HomeGalleryScreenEvent {
 }
 
 /// @nodoc
+abstract class _$$AddDataEntityToFavoritesImplCopyWith<$Res> {
+  factory _$$AddDataEntityToFavoritesImplCopyWith(
+          _$AddDataEntityToFavoritesImpl value,
+          $Res Function(_$AddDataEntityToFavoritesImpl) then) =
+      __$$AddDataEntityToFavoritesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DataEntity dataEntity});
+
+  $DataEntityCopyWith<$Res> get dataEntity;
+}
+
+/// @nodoc
+class __$$AddDataEntityToFavoritesImplCopyWithImpl<$Res>
+    extends _$HomeGalleryScreenEventCopyWithImpl<$Res,
+        _$AddDataEntityToFavoritesImpl>
+    implements _$$AddDataEntityToFavoritesImplCopyWith<$Res> {
+  __$$AddDataEntityToFavoritesImplCopyWithImpl(
+      _$AddDataEntityToFavoritesImpl _value,
+      $Res Function(_$AddDataEntityToFavoritesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? dataEntity = null,
+  }) {
+    return _then(_$AddDataEntityToFavoritesImpl(
+      dataEntity: null == dataEntity
+          ? _value.dataEntity
+          : dataEntity // ignore: cast_nullable_to_non_nullable
+              as DataEntity,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DataEntityCopyWith<$Res> get dataEntity {
+    return $DataEntityCopyWith<$Res>(_value.dataEntity, (value) {
+      return _then(_value.copyWith(dataEntity: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
+  const _$AddDataEntityToFavoritesImpl({required this.dataEntity});
+
+  @override
+  final DataEntity dataEntity;
+
+  @override
+  String toString() {
+    return 'HomeGalleryScreenEvent.handleFavoritePressed(dataEntity: $dataEntity)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDataEntityToFavoritesImpl &&
+            (identical(other.dataEntity, dataEntity) ||
+                other.dataEntity == dataEntity));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, dataEntity);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDataEntityToFavoritesImplCopyWith<_$AddDataEntityToFavoritesImpl>
+      get copyWith => __$$AddDataEntityToFavoritesImplCopyWithImpl<
+          _$AddDataEntityToFavoritesImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchImages,
+    required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+  }) {
+    return handleFavoritePressed(dataEntity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchImages,
+    TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+  }) {
+    return handleFavoritePressed?.call(dataEntity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchImages,
+    TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    required TResult orElse(),
+  }) {
+    if (handleFavoritePressed != null) {
+      return handleFavoritePressed(dataEntity);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchImages value) fetchImages,
+    required TResult Function(_AddDataEntityToFavorites value)
+        handleFavoritePressed,
+  }) {
+    return handleFavoritePressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchImages value)? fetchImages,
+    TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+  }) {
+    return handleFavoritePressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchImages value)? fetchImages,
+    TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    required TResult orElse(),
+  }) {
+    if (handleFavoritePressed != null) {
+      return handleFavoritePressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddDataEntityToFavorites implements HomeGalleryScreenEvent {
+  const factory _AddDataEntityToFavorites(
+      {required final DataEntity dataEntity}) = _$AddDataEntityToFavoritesImpl;
+
+  DataEntity get dataEntity;
+  @JsonKey(ignore: true)
+  _$$AddDataEntityToFavoritesImplCopyWith<_$AddDataEntityToFavoritesImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeGalleryScreenState {
   ScreenStatus get screenStatus => throw _privateConstructorUsedError;
+  List<DataEntity> get dataEntityList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeGalleryScreenStateCopyWith<HomeGalleryScreenState> get copyWith =>
@@ -180,7 +345,7 @@ abstract class $HomeGalleryScreenStateCopyWith<$Res> {
           $Res Function(HomeGalleryScreenState) then) =
       _$HomeGalleryScreenStateCopyWithImpl<$Res, HomeGalleryScreenState>;
   @useResult
-  $Res call({ScreenStatus screenStatus});
+  $Res call({ScreenStatus screenStatus, List<DataEntity> dataEntityList});
 
   $ScreenStatusCopyWith<$Res> get screenStatus;
 }
@@ -200,12 +365,17 @@ class _$HomeGalleryScreenStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? screenStatus = null,
+    Object? dataEntityList = null,
   }) {
     return _then(_value.copyWith(
       screenStatus: null == screenStatus
           ? _value.screenStatus
           : screenStatus // ignore: cast_nullable_to_non_nullable
               as ScreenStatus,
+      dataEntityList: null == dataEntityList
+          ? _value.dataEntityList
+          : dataEntityList // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
     ) as $Val);
   }
 
@@ -227,7 +397,7 @@ abstract class _$$HomeGalleryScreenStateImplCopyWith<$Res>
       __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ScreenStatus screenStatus});
+  $Res call({ScreenStatus screenStatus, List<DataEntity> dataEntityList});
 
   @override
   $ScreenStatusCopyWith<$Res> get screenStatus;
@@ -247,12 +417,17 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? screenStatus = null,
+    Object? dataEntityList = null,
   }) {
     return _then(_$HomeGalleryScreenStateImpl(
       screenStatus: null == screenStatus
           ? _value.screenStatus
           : screenStatus // ignore: cast_nullable_to_non_nullable
               as ScreenStatus,
+      dataEntityList: null == dataEntityList
+          ? _value._dataEntityList
+          : dataEntityList // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
     ));
   }
 }
@@ -260,14 +435,24 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
-  const _$HomeGalleryScreenStateImpl({required this.screenStatus});
+  const _$HomeGalleryScreenStateImpl(
+      {required this.screenStatus,
+      required final List<DataEntity> dataEntityList})
+      : _dataEntityList = dataEntityList;
 
   @override
   final ScreenStatus screenStatus;
+  final List<DataEntity> _dataEntityList;
+  @override
+  List<DataEntity> get dataEntityList {
+    if (_dataEntityList is EqualUnmodifiableListView) return _dataEntityList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_dataEntityList);
+  }
 
   @override
   String toString() {
-    return 'HomeGalleryScreenState(screenStatus: $screenStatus)';
+    return 'HomeGalleryScreenState(screenStatus: $screenStatus, dataEntityList: $dataEntityList)';
   }
 
   @override
@@ -276,11 +461,14 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
         (other.runtimeType == runtimeType &&
             other is _$HomeGalleryScreenStateImpl &&
             (identical(other.screenStatus, screenStatus) ||
-                other.screenStatus == screenStatus));
+                other.screenStatus == screenStatus) &&
+            const DeepCollectionEquality()
+                .equals(other._dataEntityList, _dataEntityList));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, screenStatus);
+  int get hashCode => Object.hash(runtimeType, screenStatus,
+      const DeepCollectionEquality().hash(_dataEntityList));
 
   @JsonKey(ignore: true)
   @override
@@ -292,11 +480,14 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
 
 abstract class _HomeGalleryScreenState implements HomeGalleryScreenState {
   const factory _HomeGalleryScreenState(
-          {required final ScreenStatus screenStatus}) =
+          {required final ScreenStatus screenStatus,
+          required final List<DataEntity> dataEntityList}) =
       _$HomeGalleryScreenStateImpl;
 
   @override
   ScreenStatus get screenStatus;
+  @override
+  List<DataEntity> get dataEntityList;
   @override
   @JsonKey(ignore: true)
   _$$HomeGalleryScreenStateImplCopyWith<_$HomeGalleryScreenStateImpl>

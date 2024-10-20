@@ -67,7 +67,7 @@ abstract class AppFonts {
   // Body Text 2 - Regular, Smaller
   static const TextStyle bodyText2 = TextStyle(
     fontWeight: FontWeight.w500,
-    color: AppColors.background,
+    color: AppColors.black,
     fontSize: 14,
   );
 

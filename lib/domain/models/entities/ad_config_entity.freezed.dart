@@ -16,13 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AdConfigEntity {
-  List<String> get safeFlags => throw _privateConstructorUsedError;
-  List<String> get highRiskFlags => throw _privateConstructorUsedError;
-  List<String> get unsafeFlags => throw _privateConstructorUsedError;
-  List<String> get wallUnsafeFlags => throw _privateConstructorUsedError;
-  bool get showsAds => throw _privateConstructorUsedError;
-  int get showAdLevel => throw _privateConstructorUsedError;
-  double get nsfwScore => throw _privateConstructorUsedError;
+  List<String>? get safeFlags => throw _privateConstructorUsedError;
+  List<String>? get highRiskFlags => throw _privateConstructorUsedError;
+  List<String>? get unsafeFlags => throw _privateConstructorUsedError;
+  List<String>? get wallUnsafeFlags => throw _privateConstructorUsedError;
+  bool? get showsAds => throw _privateConstructorUsedError;
+  int? get showAdLevel => throw _privateConstructorUsedError;
+  double? get nsfwScore => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AdConfigEntityCopyWith<AdConfigEntity> get copyWith =>
@@ -36,13 +36,13 @@ abstract class $AdConfigEntityCopyWith<$Res> {
       _$AdConfigEntityCopyWithImpl<$Res, AdConfigEntity>;
   @useResult
   $Res call(
-      {List<String> safeFlags,
-      List<String> highRiskFlags,
-      List<String> unsafeFlags,
-      List<String> wallUnsafeFlags,
-      bool showsAds,
-      int showAdLevel,
-      double nsfwScore});
+      {List<String>? safeFlags,
+      List<String>? highRiskFlags,
+      List<String>? unsafeFlags,
+      List<String>? wallUnsafeFlags,
+      bool? showsAds,
+      int? showAdLevel,
+      double? nsfwScore});
 }
 
 /// @nodoc
@@ -58,43 +58,43 @@ class _$AdConfigEntityCopyWithImpl<$Res, $Val extends AdConfigEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? safeFlags = null,
-    Object? highRiskFlags = null,
-    Object? unsafeFlags = null,
-    Object? wallUnsafeFlags = null,
-    Object? showsAds = null,
-    Object? showAdLevel = null,
-    Object? nsfwScore = null,
+    Object? safeFlags = freezed,
+    Object? highRiskFlags = freezed,
+    Object? unsafeFlags = freezed,
+    Object? wallUnsafeFlags = freezed,
+    Object? showsAds = freezed,
+    Object? showAdLevel = freezed,
+    Object? nsfwScore = freezed,
   }) {
     return _then(_value.copyWith(
-      safeFlags: null == safeFlags
+      safeFlags: freezed == safeFlags
           ? _value.safeFlags
           : safeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      highRiskFlags: null == highRiskFlags
+              as List<String>?,
+      highRiskFlags: freezed == highRiskFlags
           ? _value.highRiskFlags
           : highRiskFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      unsafeFlags: null == unsafeFlags
+              as List<String>?,
+      unsafeFlags: freezed == unsafeFlags
           ? _value.unsafeFlags
           : unsafeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      wallUnsafeFlags: null == wallUnsafeFlags
+              as List<String>?,
+      wallUnsafeFlags: freezed == wallUnsafeFlags
           ? _value.wallUnsafeFlags
           : wallUnsafeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      showsAds: null == showsAds
+              as List<String>?,
+      showsAds: freezed == showsAds
           ? _value.showsAds
           : showsAds // ignore: cast_nullable_to_non_nullable
-              as bool,
-      showAdLevel: null == showAdLevel
+              as bool?,
+      showAdLevel: freezed == showAdLevel
           ? _value.showAdLevel
           : showAdLevel // ignore: cast_nullable_to_non_nullable
-              as int,
-      nsfwScore: null == nsfwScore
+              as int?,
+      nsfwScore: freezed == nsfwScore
           ? _value.nsfwScore
           : nsfwScore // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ) as $Val);
   }
 }
@@ -108,13 +108,13 @@ abstract class _$$AdConfigEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> safeFlags,
-      List<String> highRiskFlags,
-      List<String> unsafeFlags,
-      List<String> wallUnsafeFlags,
-      bool showsAds,
-      int showAdLevel,
-      double nsfwScore});
+      {List<String>? safeFlags,
+      List<String>? highRiskFlags,
+      List<String>? unsafeFlags,
+      List<String>? wallUnsafeFlags,
+      bool? showsAds,
+      int? showAdLevel,
+      double? nsfwScore});
 }
 
 /// @nodoc
@@ -128,43 +128,43 @@ class __$$AdConfigEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? safeFlags = null,
-    Object? highRiskFlags = null,
-    Object? unsafeFlags = null,
-    Object? wallUnsafeFlags = null,
-    Object? showsAds = null,
-    Object? showAdLevel = null,
-    Object? nsfwScore = null,
+    Object? safeFlags = freezed,
+    Object? highRiskFlags = freezed,
+    Object? unsafeFlags = freezed,
+    Object? wallUnsafeFlags = freezed,
+    Object? showsAds = freezed,
+    Object? showAdLevel = freezed,
+    Object? nsfwScore = freezed,
   }) {
     return _then(_$AdConfigEntityImpl(
-      safeFlags: null == safeFlags
+      safeFlags: freezed == safeFlags
           ? _value._safeFlags
           : safeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      highRiskFlags: null == highRiskFlags
+              as List<String>?,
+      highRiskFlags: freezed == highRiskFlags
           ? _value._highRiskFlags
           : highRiskFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      unsafeFlags: null == unsafeFlags
+              as List<String>?,
+      unsafeFlags: freezed == unsafeFlags
           ? _value._unsafeFlags
           : unsafeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      wallUnsafeFlags: null == wallUnsafeFlags
+              as List<String>?,
+      wallUnsafeFlags: freezed == wallUnsafeFlags
           ? _value._wallUnsafeFlags
           : wallUnsafeFlags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      showsAds: null == showsAds
+              as List<String>?,
+      showsAds: freezed == showsAds
           ? _value.showsAds
           : showsAds // ignore: cast_nullable_to_non_nullable
-              as bool,
-      showAdLevel: null == showAdLevel
+              as bool?,
+      showAdLevel: freezed == showAdLevel
           ? _value.showAdLevel
           : showAdLevel // ignore: cast_nullable_to_non_nullable
-              as int,
-      nsfwScore: null == nsfwScore
+              as int?,
+      nsfwScore: freezed == nsfwScore
           ? _value.nsfwScore
           : nsfwScore // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
     ));
   }
 }
@@ -173,10 +173,10 @@ class __$$AdConfigEntityImplCopyWithImpl<$Res>
 
 class _$AdConfigEntityImpl implements _AdConfigEntity {
   _$AdConfigEntityImpl(
-      {required final List<String> safeFlags,
-      required final List<String> highRiskFlags,
-      required final List<String> unsafeFlags,
-      required final List<String> wallUnsafeFlags,
+      {required final List<String>? safeFlags,
+      required final List<String>? highRiskFlags,
+      required final List<String>? unsafeFlags,
+      required final List<String>? wallUnsafeFlags,
       required this.showsAds,
       required this.showAdLevel,
       required this.nsfwScore})
@@ -185,44 +185,52 @@ class _$AdConfigEntityImpl implements _AdConfigEntity {
         _unsafeFlags = unsafeFlags,
         _wallUnsafeFlags = wallUnsafeFlags;
 
-  final List<String> _safeFlags;
+  final List<String>? _safeFlags;
   @override
-  List<String> get safeFlags {
+  List<String>? get safeFlags {
+    final value = _safeFlags;
+    if (value == null) return null;
     if (_safeFlags is EqualUnmodifiableListView) return _safeFlags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_safeFlags);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<String> _highRiskFlags;
+  final List<String>? _highRiskFlags;
   @override
-  List<String> get highRiskFlags {
+  List<String>? get highRiskFlags {
+    final value = _highRiskFlags;
+    if (value == null) return null;
     if (_highRiskFlags is EqualUnmodifiableListView) return _highRiskFlags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_highRiskFlags);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<String> _unsafeFlags;
+  final List<String>? _unsafeFlags;
   @override
-  List<String> get unsafeFlags {
+  List<String>? get unsafeFlags {
+    final value = _unsafeFlags;
+    if (value == null) return null;
     if (_unsafeFlags is EqualUnmodifiableListView) return _unsafeFlags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_unsafeFlags);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<String> _wallUnsafeFlags;
+  final List<String>? _wallUnsafeFlags;
   @override
-  List<String> get wallUnsafeFlags {
+  List<String>? get wallUnsafeFlags {
+    final value = _wallUnsafeFlags;
+    if (value == null) return null;
     if (_wallUnsafeFlags is EqualUnmodifiableListView) return _wallUnsafeFlags;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_wallUnsafeFlags);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final bool showsAds;
+  final bool? showsAds;
   @override
-  final int showAdLevel;
+  final int? showAdLevel;
   @override
-  final double nsfwScore;
+  final double? nsfwScore;
 
   @override
   String toString() {
@@ -271,28 +279,28 @@ class _$AdConfigEntityImpl implements _AdConfigEntity {
 
 abstract class _AdConfigEntity implements AdConfigEntity {
   factory _AdConfigEntity(
-      {required final List<String> safeFlags,
-      required final List<String> highRiskFlags,
-      required final List<String> unsafeFlags,
-      required final List<String> wallUnsafeFlags,
-      required final bool showsAds,
-      required final int showAdLevel,
-      required final double nsfwScore}) = _$AdConfigEntityImpl;
+      {required final List<String>? safeFlags,
+      required final List<String>? highRiskFlags,
+      required final List<String>? unsafeFlags,
+      required final List<String>? wallUnsafeFlags,
+      required final bool? showsAds,
+      required final int? showAdLevel,
+      required final double? nsfwScore}) = _$AdConfigEntityImpl;
 
   @override
-  List<String> get safeFlags;
+  List<String>? get safeFlags;
   @override
-  List<String> get highRiskFlags;
+  List<String>? get highRiskFlags;
   @override
-  List<String> get unsafeFlags;
+  List<String>? get unsafeFlags;
   @override
-  List<String> get wallUnsafeFlags;
+  List<String>? get wallUnsafeFlags;
   @override
-  bool get showsAds;
+  bool? get showsAds;
   @override
-  int get showAdLevel;
+  int? get showAdLevel;
   @override
-  double get nsfwScore;
+  double? get nsfwScore;
   @override
   @JsonKey(ignore: true)
   _$$AdConfigEntityImplCopyWith<_$AdConfigEntityImpl> get copyWith =>
