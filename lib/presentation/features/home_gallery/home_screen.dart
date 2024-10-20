@@ -51,17 +51,17 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Expanded(
                 child:
-                BlocBuilder<HomeGalleryScreenBloc, HomeGalleryScreenState>(
+                    BlocBuilder<HomeGalleryScreenBloc, HomeGalleryScreenState>(
                   builder: (context, state) {
                     return TabBarView(
                       children: [
                         HomeTab(
                           isLoading: state.screenStatus.isLoading(),
-                          dataEntity: state.dataEntityList,
+                          dataEntity: state.dataEntityListResponse,
                           isLoadingMore: state.screenStatus.isLoadingMore(),
                         ),
                         FavoriteTab(
-                          favoriteImages: state.favoriteImages,
+                          favoriteImages: state.dataEntityListFavorites,
                           scrollController: _favoritesScrollController,
                         ),
                       ],

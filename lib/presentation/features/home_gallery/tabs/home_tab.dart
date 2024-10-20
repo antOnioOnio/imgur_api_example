@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:igmur_images_example/domain/models/entities/data_entity.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/bloc/home_gallery_screen_bloc.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/search_delegate_screen/search_delegate_screen.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/image_list_tile.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/search_bar_widget.dart';
 import 'package:igmur_images_example/presentation/widgets/custom_circular_loader.dart';
@@ -25,7 +26,9 @@ class HomeTab extends StatelessWidget {
         : Column(
             children: [
               SearchBarWidget(
-                onSearch: (value) => DoNothingAction(),
+                searchDelegate: CustomSearchDelegate(
+                  data: ['algo', 'algo'],
+                ),
               ),
               Expanded(
                 child: NotificationListener<ScrollNotification>(

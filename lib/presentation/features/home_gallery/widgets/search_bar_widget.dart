@@ -3,8 +3,8 @@ import 'package:igmur_images_example/app/constants/app_colors.dart';
 import 'package:igmur_images_example/app/constants/app_fonts.dart';
 
 class SearchBarWidget extends StatelessWidget {
-  final Function(String) onSearch;
-  const SearchBarWidget({super.key, required this.onSearch});
+  final SearchDelegate<String> searchDelegate;
+  const SearchBarWidget({super.key, required this.searchDelegate});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,12 @@ class SearchBarWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: TextField(
         style: AppFonts.bodyTextRoboto,
+          onTap: () {
+            showSearch(
+              context: context,
+              delegate: searchDelegate,
+            );
+          },
         decoration: InputDecoration(
           hintText: 'Search...',
           border: OutlineInputBorder(
@@ -22,7 +28,6 @@ class SearchBarWidget extends StatelessWidget {
             color: AppColors.greySoft,
           ),
         ),
-        onChanged: (text) => onSearch(text),
       ),
     );
   }

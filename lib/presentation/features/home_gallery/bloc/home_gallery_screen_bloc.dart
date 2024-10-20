@@ -63,10 +63,11 @@ class HomeGalleryScreenBloc
         ),
       ),
       success: (value) {
+        final newList = [...state.dataEntityListResponse, ...value];
         emit(
           state.copyWith(
             screenStatus: const ScreenStatus.success(),
-            dataEntityList: [...state.dataEntityList, ...value],
+            dataEntityListResponse: newList,
           ),
         );
       },
@@ -78,9 +79,22 @@ class HomeGalleryScreenBloc
     Emitter<HomeGalleryScreenState> emit,
     DataEntity dataEntity,
   ) {
-    final updatedList = state.dataEntityList.map((entity) {
+    //logic to update favorite list with its correct new item
+    final wasFavorite = state.dataEntityListFavorites.contains(dataEntity);
+    var newFavoriteList = [...state.dataEntityListFavorites];
+
+    if (wasFavorite) {
+      newFavoriteList = state.dataEntityListFavorites
+          .where((entity) => entity.id != dataEntity.id)
+          .toList();
+    } else {
+      newFavoriteList.add(dataEntity.copyWith(favorite: true));
+    }
+
+    //logic to update response list with its correct new item updated
+    final updatedList = state.dataEntityListResponse.map((entity) {
       if (entity == dataEntity) {
-        return entity.copyWith(favorite: !(dataEntity.favorite ?? false));
+        return entity.copyWith(favorite: !wasFavorite);
       }
 
       return entity;
@@ -88,7 +102,8 @@ class HomeGalleryScreenBloc
 
     emit(
       state.copyWith(
-        dataEntityList: updatedList,
+        dataEntityListFavorites: newFavoriteList,
+        dataEntityListResponse: updatedList,
       ),
     );
   }

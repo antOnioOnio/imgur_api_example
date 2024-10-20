@@ -332,7 +332,12 @@ abstract class _AddDataEntityToFavorites implements HomeGalleryScreenEvent {
 /// @nodoc
 mixin _$HomeGalleryScreenState {
   ScreenStatus get screenStatus => throw _privateConstructorUsedError;
-  List<DataEntity> get dataEntityList => throw _privateConstructorUsedError;
+  List<DataEntity> get dataEntityListResponse =>
+      throw _privateConstructorUsedError;
+  List<DataEntity> get dataEntityListFavorites =>
+      throw _privateConstructorUsedError;
+  List<DataEntity> get dataEntityListSearched =>
+      throw _privateConstructorUsedError;
   int get currentPage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -348,7 +353,9 @@ abstract class $HomeGalleryScreenStateCopyWith<$Res> {
   @useResult
   $Res call(
       {ScreenStatus screenStatus,
-      List<DataEntity> dataEntityList,
+      List<DataEntity> dataEntityListResponse,
+      List<DataEntity> dataEntityListFavorites,
+      List<DataEntity> dataEntityListSearched,
       int currentPage});
 
   $ScreenStatusCopyWith<$Res> get screenStatus;
@@ -369,7 +376,9 @@ class _$HomeGalleryScreenStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? screenStatus = null,
-    Object? dataEntityList = null,
+    Object? dataEntityListResponse = null,
+    Object? dataEntityListFavorites = null,
+    Object? dataEntityListSearched = null,
     Object? currentPage = null,
   }) {
     return _then(_value.copyWith(
@@ -377,9 +386,17 @@ class _$HomeGalleryScreenStateCopyWithImpl<$Res,
           ? _value.screenStatus
           : screenStatus // ignore: cast_nullable_to_non_nullable
               as ScreenStatus,
-      dataEntityList: null == dataEntityList
-          ? _value.dataEntityList
-          : dataEntityList // ignore: cast_nullable_to_non_nullable
+      dataEntityListResponse: null == dataEntityListResponse
+          ? _value.dataEntityListResponse
+          : dataEntityListResponse // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
+      dataEntityListFavorites: null == dataEntityListFavorites
+          ? _value.dataEntityListFavorites
+          : dataEntityListFavorites // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
+      dataEntityListSearched: null == dataEntityListSearched
+          ? _value.dataEntityListSearched
+          : dataEntityListSearched // ignore: cast_nullable_to_non_nullable
               as List<DataEntity>,
       currentPage: null == currentPage
           ? _value.currentPage
@@ -408,7 +425,9 @@ abstract class _$$HomeGalleryScreenStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {ScreenStatus screenStatus,
-      List<DataEntity> dataEntityList,
+      List<DataEntity> dataEntityListResponse,
+      List<DataEntity> dataEntityListFavorites,
+      List<DataEntity> dataEntityListSearched,
       int currentPage});
 
   @override
@@ -429,7 +448,9 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? screenStatus = null,
-    Object? dataEntityList = null,
+    Object? dataEntityListResponse = null,
+    Object? dataEntityListFavorites = null,
+    Object? dataEntityListSearched = null,
     Object? currentPage = null,
   }) {
     return _then(_$HomeGalleryScreenStateImpl(
@@ -437,9 +458,17 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
           ? _value.screenStatus
           : screenStatus // ignore: cast_nullable_to_non_nullable
               as ScreenStatus,
-      dataEntityList: null == dataEntityList
-          ? _value._dataEntityList
-          : dataEntityList // ignore: cast_nullable_to_non_nullable
+      dataEntityListResponse: null == dataEntityListResponse
+          ? _value._dataEntityListResponse
+          : dataEntityListResponse // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
+      dataEntityListFavorites: null == dataEntityListFavorites
+          ? _value._dataEntityListFavorites
+          : dataEntityListFavorites // ignore: cast_nullable_to_non_nullable
+              as List<DataEntity>,
+      dataEntityListSearched: null == dataEntityListSearched
+          ? _value._dataEntityListSearched
+          : dataEntityListSearched // ignore: cast_nullable_to_non_nullable
               as List<DataEntity>,
       currentPage: null == currentPage
           ? _value.currentPage
@@ -454,18 +483,41 @@ class __$$HomeGalleryScreenStateImplCopyWithImpl<$Res>
 class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
   const _$HomeGalleryScreenStateImpl(
       {required this.screenStatus,
-      required final List<DataEntity> dataEntityList,
+      required final List<DataEntity> dataEntityListResponse,
+      required final List<DataEntity> dataEntityListFavorites,
+      required final List<DataEntity> dataEntityListSearched,
       required this.currentPage})
-      : _dataEntityList = dataEntityList;
+      : _dataEntityListResponse = dataEntityListResponse,
+        _dataEntityListFavorites = dataEntityListFavorites,
+        _dataEntityListSearched = dataEntityListSearched;
 
   @override
   final ScreenStatus screenStatus;
-  final List<DataEntity> _dataEntityList;
+  final List<DataEntity> _dataEntityListResponse;
   @override
-  List<DataEntity> get dataEntityList {
-    if (_dataEntityList is EqualUnmodifiableListView) return _dataEntityList;
+  List<DataEntity> get dataEntityListResponse {
+    if (_dataEntityListResponse is EqualUnmodifiableListView)
+      return _dataEntityListResponse;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_dataEntityList);
+    return EqualUnmodifiableListView(_dataEntityListResponse);
+  }
+
+  final List<DataEntity> _dataEntityListFavorites;
+  @override
+  List<DataEntity> get dataEntityListFavorites {
+    if (_dataEntityListFavorites is EqualUnmodifiableListView)
+      return _dataEntityListFavorites;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_dataEntityListFavorites);
+  }
+
+  final List<DataEntity> _dataEntityListSearched;
+  @override
+  List<DataEntity> get dataEntityListSearched {
+    if (_dataEntityListSearched is EqualUnmodifiableListView)
+      return _dataEntityListSearched;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_dataEntityListSearched);
   }
 
   @override
@@ -473,7 +525,7 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
 
   @override
   String toString() {
-    return 'HomeGalleryScreenState(screenStatus: $screenStatus, dataEntityList: $dataEntityList, currentPage: $currentPage)';
+    return 'HomeGalleryScreenState(screenStatus: $screenStatus, dataEntityListResponse: $dataEntityListResponse, dataEntityListFavorites: $dataEntityListFavorites, dataEntityListSearched: $dataEntityListSearched, currentPage: $currentPage)';
   }
 
   @override
@@ -483,15 +535,24 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
             other is _$HomeGalleryScreenStateImpl &&
             (identical(other.screenStatus, screenStatus) ||
                 other.screenStatus == screenStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._dataEntityList, _dataEntityList) &&
+            const DeepCollectionEquality().equals(
+                other._dataEntityListResponse, _dataEntityListResponse) &&
+            const DeepCollectionEquality().equals(
+                other._dataEntityListFavorites, _dataEntityListFavorites) &&
+            const DeepCollectionEquality().equals(
+                other._dataEntityListSearched, _dataEntityListSearched) &&
             (identical(other.currentPage, currentPage) ||
                 other.currentPage == currentPage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, screenStatus,
-      const DeepCollectionEquality().hash(_dataEntityList), currentPage);
+  int get hashCode => Object.hash(
+      runtimeType,
+      screenStatus,
+      const DeepCollectionEquality().hash(_dataEntityListResponse),
+      const DeepCollectionEquality().hash(_dataEntityListFavorites),
+      const DeepCollectionEquality().hash(_dataEntityListSearched),
+      currentPage);
 
   @JsonKey(ignore: true)
   @override
@@ -504,13 +565,19 @@ class _$HomeGalleryScreenStateImpl implements _HomeGalleryScreenState {
 abstract class _HomeGalleryScreenState implements HomeGalleryScreenState {
   const factory _HomeGalleryScreenState(
       {required final ScreenStatus screenStatus,
-      required final List<DataEntity> dataEntityList,
+      required final List<DataEntity> dataEntityListResponse,
+      required final List<DataEntity> dataEntityListFavorites,
+      required final List<DataEntity> dataEntityListSearched,
       required final int currentPage}) = _$HomeGalleryScreenStateImpl;
 
   @override
   ScreenStatus get screenStatus;
   @override
-  List<DataEntity> get dataEntityList;
+  List<DataEntity> get dataEntityListResponse;
+  @override
+  List<DataEntity> get dataEntityListFavorites;
+  @override
+  List<DataEntity> get dataEntityListSearched;
   @override
   int get currentPage;
   @override

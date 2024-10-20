@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:igmur_images_example/app/constants/app_fonts.dart';
 import 'package:igmur_images_example/domain/models/entities/data_entity.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/image_list_tile.dart';
 
@@ -15,27 +16,31 @@ class FavoriteTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return favoriteImages.isEmpty
-        ? Center(
+        ? const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
+                Icon(
                   Icons.image_not_supported,
                   size: 80,
                   color: Colors.grey,
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
                 Text(
                   'No favorites added yet',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: AppFonts.headLine,
                 ),
               ],
             ),
           )
-        : Expanded(
-            child: ImageListTile(
-              list: favoriteImages,
-            ),
+        : Column(
+            children: [
+              Expanded(
+                child: ImageListTile(
+                  list: favoriteImages,
+                ),
+              ),
+            ],
           );
   }
 }
