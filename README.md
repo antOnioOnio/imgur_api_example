@@ -97,4 +97,4 @@ This Flutter project serves as a comprehensive example of how to:
 This project uses **Flutter 3.16.7**.
 
 To ensure compatibility, make sure you are using this version of Flutter or a compatible one. You
-can check your current Flutter version by running:
+can check your current Flutter version by running: `flutter --version`.
