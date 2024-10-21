@@ -6,10 +6,23 @@ import 'package:igmur_images_example/presentation/features/home_gallery/utils/ho
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/image_widget.dart';
 import 'package:igmur_images_example/presentation/widgets/text_icon.dart';
 
-class ImageDetailScreen extends StatelessWidget {
+class ImageDetailScreen extends StatefulWidget {
   final DataEntity dataEntity;
 
   const ImageDetailScreen({super.key, required this.dataEntity});
+
+  @override
+  State<ImageDetailScreen> createState() => _ImageDetailScreenState();
+}
+
+class _ImageDetailScreenState extends State<ImageDetailScreen> {
+  late bool isFavorite;
+
+  @override
+  void initState() {
+    super.initState();
+    isFavorite = widget.dataEntity.favorite ?? false;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +41,7 @@ class ImageDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              dataEntity.title ?? 'No Title',
+              widget.dataEntity.title ?? 'No Title',
               maxLines: 2,
               style: Theme.of(context).textTheme.displayMedium,
             ),
@@ -37,30 +50,25 @@ class ImageDetailScreen extends StatelessWidget {
               children: [
                 Text(
                   DateTimeExtension.fromMillisecondsToDateString(
-                    dataEntity.datetime ?? 0,
+                    widget.dataEntity.datetime ?? 0,
                   ),
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 IconButton(
                   icon: Icon(
-                    dataEntity.favorite == true
-                        ? Icons.star
-                        : Icons.star_border,
+                    isFavorite ? Icons.star : Icons.star_border,
                     color: AppColors.primary,
                   ),
-                  onPressed: () => HomeGalleryUtils.handleOnFavoritePressed(
-                    context,
-                    dataEntity,
-                  ),
+                  onPressed: () => handleFavorite(),
                 ),
                 TextIcon(
                   icon: Icons.thumb_up_alt_outlined,
-                  text: '${dataEntity.ups}',
+                  text: '${widget.dataEntity.ups}',
                   color: AppColors.primary,
                 ),
                 TextIcon(
                   icon: Icons.thumb_down_alt_outlined,
-                  text: '${dataEntity.downs}',
+                  text: '${widget.dataEntity.downs}',
                   color: AppColors.error,
                 ),
               ],
@@ -68,10 +76,10 @@ class ImageDetailScreen extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 physics: const ClampingScrollPhysics(),
-                itemCount: dataEntity.images?.length ?? 0,
+                itemCount: widget.dataEntity.images?.length ?? 0,
                 itemBuilder: (context, index) {
                   return ImageWidget(
-                    imageLink: dataEntity.images?[index].link ?? '',
+                    imageLink: widget.dataEntity.images?[index].link ?? '',
                   );
                 },
               ),
@@ -80,5 +88,15 @@ class ImageDetailScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void handleFavorite() {
+    HomeGalleryUtils.handleOnFavoritePressed(
+      context,
+      widget.dataEntity,
+    );
+    setState(() {
+      isFavorite = !isFavorite;
+    });
   }
 }

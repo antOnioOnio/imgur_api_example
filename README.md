@@ -87,3 +87,14 @@ This Flutter project serves as a comprehensive example of how to:
 - Navigate between different screens, including a detailed image view.
 - Implement a search feature using `SearchDelegate`.
 - Manage a favorites system, where users can add and revisit their preferred images.
+
+## Demo Video
+
+[Watch the demonstration video](./assets/video/readme_video.mp4)
+
+## Flutter Version
+
+This project uses **Flutter 3.16.7**.
+
+To ensure compatibility, make sure you are using this version of Flutter or a compatible one. You
+can check your current Flutter version by running:

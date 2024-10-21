@@ -74,7 +74,6 @@ class SearchDelegateBloc
     DataEntity dataEntity,
   ) {
     final bool newFavValue = dataEntity.favorite == true ? false : true;
-    //logic to update response list with its correct new item updated
     final updatedList = state.dataEntityListSearched.map((entity) {
       if (entity == dataEntity) {
         return entity.copyWith(favorite: newFavValue);

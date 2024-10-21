@@ -48,18 +48,23 @@ class FavBloc extends Bloc<FavEvent, FavState> {
     Emitter<FavState> emit,
     DataEntity dataEntity,
   ) async {
-    final wasFavorite = state.dataEntityListFavorites.contains(dataEntity);
-    var newFavoriteList = [...state.dataEntityListFavorites];
-    if (wasFavorite) {
+    final newFavValue = dataEntity.favorite == true ? false : true;
+    late List<DataEntity> newFavoriteList;
+    if (!newFavValue) {
       await _repository.deleteGalleryFavorite(dataEntity: dataEntity);
       newFavoriteList = state.dataEntityListFavorites
           .where((entity) => entity.id != dataEntity.id)
           .toList();
     } else {
       await _repository.saveGalleryFavorite(
-        dataEntity: dataEntity.copyWith(favorite: true),
+        dataEntity: dataEntity.copyWith(
+          favorite: true,
+        ),
       );
-      newFavoriteList.add(dataEntity.copyWith(favorite: true));
+      newFavoriteList = [
+        ...state.dataEntityListFavorites,
+        dataEntity.copyWith(favorite: true),
+      ];
     }
 
     emit(state.copyWith(dataEntityListFavorites: newFavoriteList));
