@@ -6,7 +6,6 @@ class HomeGalleryScreenState with _$HomeGalleryScreenState {
     required ScreenStatus screenStatus,
     required List<DataEntity> dataEntityListResponse,
     required List<DataEntity> dataEntityListFavorites,
-    required List<DataEntity> dataEntityListSearched,
     required int currentPage,
   }) = _HomeGalleryScreenState;
 
@@ -15,7 +14,6 @@ class HomeGalleryScreenState with _$HomeGalleryScreenState {
       screenStatus: ScreenStatus.initial(),
       dataEntityListResponse: [],
       dataEntityListFavorites: [],
-      dataEntityListSearched: [],
       currentPage: 0,
     );
   }

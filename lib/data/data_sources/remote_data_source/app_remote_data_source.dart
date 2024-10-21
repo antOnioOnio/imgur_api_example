@@ -22,4 +22,16 @@ class AppRemoteDataSource implements AppRemoteDataSourceContract {
       request.albumPreviews,
     );
   }
+
+  @override
+  Future<ResponseRemoteEntity> searchGalleryImages({
+    required SearchGalleryRemoteRequest request,
+  }) async {
+    return _api.searchGalleryImages(
+      request.sort,
+      request.window,
+      request.page,
+      request.query,
+    );
+  }
 }

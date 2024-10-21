@@ -33,4 +33,23 @@ class AppRepository implements AppRepositoryContract {
       );
     }
   }
+
+  @override
+  Future<Result<List<DataEntity>>> searchGalleryImages({
+    required SearchGalleryRequest request,
+  }) async {
+    try {
+      final data = await _appRemoteDataSourceContract.searchGalleryImages(
+        request: request.toSearchGalleryRemoteRequest(),
+      );
+
+      return Result.success(data.toEntity().filterOutAnimatedImages());
+    } catch (error) {
+      return Result.failure(
+        error: RepositoryError.fromDataSourceError(
+          NetworkError.fromException(error),
+        ),
+      );
+    }
+  }
 }

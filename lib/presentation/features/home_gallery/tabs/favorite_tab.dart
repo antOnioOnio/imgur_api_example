@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:igmur_images_example/app/constants/app_fonts.dart';
 import 'package:igmur_images_example/domain/models/entities/data_entity.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/bloc/home_gallery_screen_bloc.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/image_list_tile.dart';
 
 class FavoriteTab extends StatelessWidget {
@@ -38,6 +40,13 @@ class FavoriteTab extends StatelessWidget {
               Expanded(
                 child: ImageListTile(
                   list: favoriteImages,
+                  onFavoritePressed: (dataEntity) {
+                    context.read<HomeGalleryScreenBloc>().add(
+                          HomeGalleryScreenEvent.handleFavoritePressed(
+                            dataEntity: dataEntity,
+                          ),
+                        );
+                  },
                 ),
               ),
             ],

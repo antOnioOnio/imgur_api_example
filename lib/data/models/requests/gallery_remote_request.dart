@@ -14,3 +14,13 @@ class GalleryRemoteRequest with _$GalleryRemoteRequest {
     required bool albumPreviews,
   }) = _GalleryRemoteRequest;
 }
+
+@freezed
+class SearchGalleryRemoteRequest with _$SearchGalleryRemoteRequest {
+  const factory SearchGalleryRemoteRequest({
+    required String sort,
+    required String window,
+    required int page,
+    required String query,
+  }) = _SearchGalleryRemoteRequest;
+}

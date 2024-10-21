@@ -264,3 +264,181 @@ abstract class _GalleryRequest implements GalleryRequest {
   _$$GalleryRequestImplCopyWith<_$GalleryRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$SearchGalleryRequest {
+  String get sort => throw _privateConstructorUsedError;
+  String get window => throw _privateConstructorUsedError;
+  int get page => throw _privateConstructorUsedError;
+  String get query => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SearchGalleryRequestCopyWith<SearchGalleryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SearchGalleryRequestCopyWith<$Res> {
+  factory $SearchGalleryRequestCopyWith(SearchGalleryRequest value,
+          $Res Function(SearchGalleryRequest) then) =
+      _$SearchGalleryRequestCopyWithImpl<$Res, SearchGalleryRequest>;
+  @useResult
+  $Res call({String sort, String window, int page, String query});
+}
+
+/// @nodoc
+class _$SearchGalleryRequestCopyWithImpl<$Res,
+        $Val extends SearchGalleryRequest>
+    implements $SearchGalleryRequestCopyWith<$Res> {
+  _$SearchGalleryRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? sort = null,
+    Object? window = null,
+    Object? page = null,
+    Object? query = null,
+  }) {
+    return _then(_value.copyWith(
+      sort: null == sort
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String,
+      window: null == window
+          ? _value.window
+          : window // ignore: cast_nullable_to_non_nullable
+              as String,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      query: null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$SearchGalleryRequestImplCopyWith<$Res>
+    implements $SearchGalleryRequestCopyWith<$Res> {
+  factory _$$SearchGalleryRequestImplCopyWith(_$SearchGalleryRequestImpl value,
+          $Res Function(_$SearchGalleryRequestImpl) then) =
+      __$$SearchGalleryRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String sort, String window, int page, String query});
+}
+
+/// @nodoc
+class __$$SearchGalleryRequestImplCopyWithImpl<$Res>
+    extends _$SearchGalleryRequestCopyWithImpl<$Res, _$SearchGalleryRequestImpl>
+    implements _$$SearchGalleryRequestImplCopyWith<$Res> {
+  __$$SearchGalleryRequestImplCopyWithImpl(_$SearchGalleryRequestImpl _value,
+      $Res Function(_$SearchGalleryRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? sort = null,
+    Object? window = null,
+    Object? page = null,
+    Object? query = null,
+  }) {
+    return _then(_$SearchGalleryRequestImpl(
+      sort: null == sort
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String,
+      window: null == window
+          ? _value.window
+          : window // ignore: cast_nullable_to_non_nullable
+              as String,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      query: null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchGalleryRequestImpl implements _SearchGalleryRequest {
+  const _$SearchGalleryRequestImpl(
+      {this.sort = 'time',
+      this.window = 'all',
+      required this.page,
+      required this.query});
+
+  @override
+  @JsonKey()
+  final String sort;
+  @override
+  @JsonKey()
+  final String window;
+  @override
+  final int page;
+  @override
+  final String query;
+
+  @override
+  String toString() {
+    return 'SearchGalleryRequest(sort: $sort, window: $window, page: $page, query: $query)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchGalleryRequestImpl &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.window, window) || other.window == window) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.query, query) || other.query == query));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, sort, window, page, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchGalleryRequestImplCopyWith<_$SearchGalleryRequestImpl>
+      get copyWith =>
+          __$$SearchGalleryRequestImplCopyWithImpl<_$SearchGalleryRequestImpl>(
+              this, _$identity);
+}
+
+abstract class _SearchGalleryRequest implements SearchGalleryRequest {
+  const factory _SearchGalleryRequest(
+      {final String sort,
+      final String window,
+      required final int page,
+      required final String query}) = _$SearchGalleryRequestImpl;
+
+  @override
+  String get sort;
+  @override
+  String get window;
+  @override
+  int get page;
+  @override
+  String get query;
+  @override
+  @JsonKey(ignore: true)
+  _$$SearchGalleryRequestImplCopyWith<_$SearchGalleryRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

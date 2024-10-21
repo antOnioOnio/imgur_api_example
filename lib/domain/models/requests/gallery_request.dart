@@ -14,3 +14,13 @@ class GalleryRequest with _$GalleryRequest {
     @Default(true) bool albumPreviews,
   }) = _GalleryRequest;
 }
+
+@freezed
+class SearchGalleryRequest with _$SearchGalleryRequest {
+  const factory SearchGalleryRequest({
+    @Default('time') String sort,
+    @Default('all') String window,
+    required int page,
+    required String query,
+  }) = _SearchGalleryRequest;
+}

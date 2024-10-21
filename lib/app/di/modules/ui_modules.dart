@@ -11,4 +11,9 @@ void _uiModulesInit() {
       repositoryContract: uiModulesDi(),
     ),
   );
+  uiModulesDi.registerFactory(
+    () => SearchDelegateBloc(
+      repositoryContract: uiModulesDi(),
+    ),
+  );
 }

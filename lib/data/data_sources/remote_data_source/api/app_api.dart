@@ -8,7 +8,7 @@ part 'app_api.g.dart';
 abstract class AppApi {
   factory AppApi(Dio dio, {String? baseUrl}) = _AppApi;
 
-  @GET('https://api.imgur.com/3/gallery/{section}/{sort}/{window}/{page}')
+  @GET('{section}/{sort}/{window}/{page}')
   Future<ResponseRemoteEntity> getGalleryImages(
     @Path() String section,
     @Path() String sort,
@@ -17,5 +17,13 @@ abstract class AppApi {
     @Query('showViral') bool showViral,
     @Query('mature') bool mature,
     @Query('album_previews') bool albumPreviews,
+  );
+
+  @GET('search/{sort}/{window}/{page}')
+  Future<ResponseRemoteEntity> searchGalleryImages(
+    @Path() String sort,
+    @Path() String window,
+    @Path() int page,
+    @Query('q') String query,
   );
 }

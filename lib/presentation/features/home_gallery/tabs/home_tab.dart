@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:igmur_images_example/domain/models/entities/data_entity.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/bloc/home_gallery_screen_bloc.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/search_delegate_screen/bloc/search_delegate_bloc.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/search_delegate_screen/search_delegate_screen.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/image_list_tile.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/widgets/search_bar_widget.dart';
@@ -27,7 +28,7 @@ class HomeTab extends StatelessWidget {
             children: [
               SearchBarWidget(
                 searchDelegate: CustomSearchDelegate(
-                  data: ['algo', 'algo'],
+                  bloc: BlocProvider.of<SearchDelegateBloc>(context),
                 ),
               ),
               Expanded(
@@ -45,6 +46,13 @@ class HomeTab extends StatelessWidget {
                   },
                   child: ImageListTile(
                     list: dataEntity,
+                    onFavoritePressed: (dataEntity) {
+                      context.read<HomeGalleryScreenBloc>().add(
+                            HomeGalleryScreenEvent.handleFavoritePressed(
+                              dataEntity: dataEntity,
+                            ),
+                          );
+                    },
                   ),
                 ),
               ),

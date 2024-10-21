@@ -260,3 +260,183 @@ abstract class _GalleryRemoteRequest implements GalleryRemoteRequest {
   _$$GalleryRemoteRequestImplCopyWith<_$GalleryRemoteRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$SearchGalleryRemoteRequest {
+  String get sort => throw _privateConstructorUsedError;
+  String get window => throw _privateConstructorUsedError;
+  int get page => throw _privateConstructorUsedError;
+  String get query => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SearchGalleryRemoteRequestCopyWith<SearchGalleryRemoteRequest>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SearchGalleryRemoteRequestCopyWith<$Res> {
+  factory $SearchGalleryRemoteRequestCopyWith(SearchGalleryRemoteRequest value,
+          $Res Function(SearchGalleryRemoteRequest) then) =
+      _$SearchGalleryRemoteRequestCopyWithImpl<$Res,
+          SearchGalleryRemoteRequest>;
+  @useResult
+  $Res call({String sort, String window, int page, String query});
+}
+
+/// @nodoc
+class _$SearchGalleryRemoteRequestCopyWithImpl<$Res,
+        $Val extends SearchGalleryRemoteRequest>
+    implements $SearchGalleryRemoteRequestCopyWith<$Res> {
+  _$SearchGalleryRemoteRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? sort = null,
+    Object? window = null,
+    Object? page = null,
+    Object? query = null,
+  }) {
+    return _then(_value.copyWith(
+      sort: null == sort
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String,
+      window: null == window
+          ? _value.window
+          : window // ignore: cast_nullable_to_non_nullable
+              as String,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      query: null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$SearchGalleryRemoteRequestImplCopyWith<$Res>
+    implements $SearchGalleryRemoteRequestCopyWith<$Res> {
+  factory _$$SearchGalleryRemoteRequestImplCopyWith(
+          _$SearchGalleryRemoteRequestImpl value,
+          $Res Function(_$SearchGalleryRemoteRequestImpl) then) =
+      __$$SearchGalleryRemoteRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String sort, String window, int page, String query});
+}
+
+/// @nodoc
+class __$$SearchGalleryRemoteRequestImplCopyWithImpl<$Res>
+    extends _$SearchGalleryRemoteRequestCopyWithImpl<$Res,
+        _$SearchGalleryRemoteRequestImpl>
+    implements _$$SearchGalleryRemoteRequestImplCopyWith<$Res> {
+  __$$SearchGalleryRemoteRequestImplCopyWithImpl(
+      _$SearchGalleryRemoteRequestImpl _value,
+      $Res Function(_$SearchGalleryRemoteRequestImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? sort = null,
+    Object? window = null,
+    Object? page = null,
+    Object? query = null,
+  }) {
+    return _then(_$SearchGalleryRemoteRequestImpl(
+      sort: null == sort
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as String,
+      window: null == window
+          ? _value.window
+          : window // ignore: cast_nullable_to_non_nullable
+              as String,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      query: null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchGalleryRemoteRequestImpl implements _SearchGalleryRemoteRequest {
+  const _$SearchGalleryRemoteRequestImpl(
+      {required this.sort,
+      required this.window,
+      required this.page,
+      required this.query});
+
+  @override
+  final String sort;
+  @override
+  final String window;
+  @override
+  final int page;
+  @override
+  final String query;
+
+  @override
+  String toString() {
+    return 'SearchGalleryRemoteRequest(sort: $sort, window: $window, page: $page, query: $query)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchGalleryRemoteRequestImpl &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.window, window) || other.window == window) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.query, query) || other.query == query));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, sort, window, page, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchGalleryRemoteRequestImplCopyWith<_$SearchGalleryRemoteRequestImpl>
+      get copyWith => __$$SearchGalleryRemoteRequestImplCopyWithImpl<
+          _$SearchGalleryRemoteRequestImpl>(this, _$identity);
+}
+
+abstract class _SearchGalleryRemoteRequest
+    implements SearchGalleryRemoteRequest {
+  const factory _SearchGalleryRemoteRequest(
+      {required final String sort,
+      required final String window,
+      required final int page,
+      required final String query}) = _$SearchGalleryRemoteRequestImpl;
+
+  @override
+  String get sort;
+  @override
+  String get window;
+  @override
+  int get page;
+  @override
+  String get query;
+  @override
+  @JsonKey(ignore: true)
+  _$$SearchGalleryRemoteRequestImplCopyWith<_$SearchGalleryRemoteRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

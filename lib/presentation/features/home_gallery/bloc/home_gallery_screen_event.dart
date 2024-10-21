@@ -7,4 +7,6 @@ class HomeGalleryScreenEvent with _$HomeGalleryScreenEvent {
   const factory HomeGalleryScreenEvent.handleFavoritePressed({
     required DataEntity dataEntity,
   }) = _AddDataEntityToFavorites;
+
+
 }

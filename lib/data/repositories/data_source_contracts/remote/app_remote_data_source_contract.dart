@@ -5,4 +5,8 @@ abstract class AppRemoteDataSourceContract {
   Future<ResponseRemoteEntity> getGalleryImages({
     required GalleryRemoteRequest request,
   });
+
+  Future<ResponseRemoteEntity> searchGalleryImages({
+    required SearchGalleryRemoteRequest request,
+  });
 }

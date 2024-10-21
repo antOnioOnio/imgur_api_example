@@ -6,4 +6,8 @@ abstract class AppRepositoryContract {
   Future<Result<List<DataEntity>>> getGalleryImages({
     required GalleryRequest request,
   });
+
+  Future<Result<List<DataEntity>>> searchGalleryImages({
+    required SearchGalleryRequest request,
+  });
 }

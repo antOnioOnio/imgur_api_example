@@ -147,3 +147,13 @@ extension GalleryRequestExtension on GalleryRequest {
         albumPreviews: albumPreviews,
       );
 }
+
+extension SearchGalleryRequestExtension on SearchGalleryRequest {
+  SearchGalleryRemoteRequest toSearchGalleryRemoteRequest() =>
+      SearchGalleryRemoteRequest(
+        sort: sort,
+        window: window,
+        page: page,
+        query: query,
+      );
+}

@@ -9,6 +9,7 @@ import 'package:igmur_images_example/data/repositories/app_repository.dart';
 import 'package:igmur_images_example/data/repositories/data_source_contracts/remote/app_remote_data_source_contract.dart';
 import 'package:igmur_images_example/domain/repository_contracts/app_repository_contract.dart';
 import 'package:igmur_images_example/presentation/features/home_gallery/bloc/home_gallery_screen_bloc.dart';
+import 'package:igmur_images_example/presentation/features/home_gallery/search_delegate_screen/bloc/search_delegate_bloc.dart';
 import 'package:igmur_images_example/presentation/features/splash/splash_bloc/splash_bloc.dart';
 
 
