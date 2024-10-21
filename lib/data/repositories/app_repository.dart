@@ -28,7 +28,8 @@ class AppRepository implements AppRepositoryContract {
       );
 
       final remoteEntities = data.toEntity().filterOutAnimatedImages();
-      final favoriteEntities = await _appLocalDataSourceContract.getGalleryFavorites();
+      final favoriteEntities =
+          await _appLocalDataSourceContract.getGalleryFavorites();
 
       final favoriteIds = favoriteEntities.map((e) => e.id).toSet();
 
@@ -54,8 +55,16 @@ class AppRepository implements AppRepositoryContract {
       final data = await _appRemoteDataSourceContract.searchGalleryImages(
         request: request.toSearchGalleryRemoteRequest(),
       );
+      final remoteEntities = data.toEntity().filterOutAnimatedImages();
+      final favoriteEntities =
+          await _appLocalDataSourceContract.getGalleryFavorites();
+      final favoriteIds = favoriteEntities.map((e) => e.id).toSet();
 
-      return Result.success(data.toEntity().filterOutAnimatedImages());
+      final updatedEntities = remoteEntities.map((entity) {
+        return entity.copyWith(favorite: favoriteIds.contains(entity.id));
+      }).toList();
+
+      return Result.success(updatedEntities);
     } catch (error) {
       return Result.failure(
         error: RepositoryError.fromDataSourceError(

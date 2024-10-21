@@ -20,41 +20,54 @@ class HomeTab extends StatelessWidget {
       builder: (context, state) {
         return state.screenStatus.isLoading()
             ? const CustomCircularLoader()
-            : Column(
-                children: [
-                  SearchBarWidget(
-                    searchDelegate: CustomSearchDelegate(
-                      bloc: BlocProvider.of<SearchDelegateBloc>(context),
-                    ),
-                  ),
-                  Expanded(
-                    child: NotificationListener<ScrollNotification>(
-                      onNotification: (ScrollNotification scrollInfo) {
-                        if (scrollInfo.metrics.pixels ==
-                                scrollInfo.metrics.maxScrollExtent &&
-                            !state.screenStatus.isLoadingMore()) {
-                          context.read<HomeGalleryScreenBloc>().add(
-                                const HomeGalleryScreenEvent.fetchImages(),
-                              );
-                        }
-
-                        return false;
+            : state.screenStatus.isError()
+                ? Center(
+                    child: GestureDetector(
+                      onTap: () {
+                        context.read<HomeGalleryScreenBloc>().add(
+                              const HomeGalleryScreenEvent.fetchImages(),
+                            );
                       },
-                      child: ImageListTile(
-                        list: state.dataEntityListResponse,
-                        onFavoritePressed: (dataEntity) =>
-                            HomeGalleryUtils.handleOnFavoritePressed(
-                          context,
-                          dataEntity,
-                        ),
+                      child: const Text(
+                        'error trying to get images, please try again',
                       ),
                     ),
-                  ),
-                  state.screenStatus.isLoadingMore()
-                      ? const CustomCircularLoader()
-                      : const SizedBox.shrink(),
-                ],
-              );
+                  )
+                : Column(
+                    children: [
+                      SearchBarWidget(
+                        searchDelegate: CustomSearchDelegate(
+                          bloc: BlocProvider.of<SearchDelegateBloc>(context),
+                        ),
+                      ),
+                      Expanded(
+                        child: NotificationListener<ScrollNotification>(
+                          onNotification: (ScrollNotification scrollInfo) {
+                            if (scrollInfo.metrics.pixels ==
+                                    scrollInfo.metrics.maxScrollExtent &&
+                                !state.screenStatus.isLoadingMore()) {
+                              context.read<HomeGalleryScreenBloc>().add(
+                                    const HomeGalleryScreenEvent.fetchImages(),
+                                  );
+                            }
+
+                            return false;
+                          },
+                          child: ImageListTile(
+                            list: state.dataEntityListResponse,
+                            onFavoritePressed: (dataEntity) =>
+                                HomeGalleryUtils.handleOnFavoritePressed(
+                              context,
+                              dataEntity,
+                            ),
+                          ),
+                        ),
+                      ),
+                      state.screenStatus.isLoadingMore()
+                          ? const CustomCircularLoader()
+                          : const SizedBox.shrink(),
+                    ],
+                  );
       },
     );
   }
