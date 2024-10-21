@@ -72,7 +72,7 @@ void main() {
             'ups': null,
             'downs': null,
             'points': null,
-            'score': null
+            'score': null,
           },
           {
             'id': 'ssnGt7H',
@@ -106,7 +106,7 @@ void main() {
             'ups': null,
             'downs': null,
             'points': null,
-            'score': null
+            'score': null,
           },
           {
             'id': 'yDBJbA0',
@@ -140,7 +140,7 @@ void main() {
             'ups': null,
             'downs': null,
             'points': null,
-            'score': null
+            'score': null,
           },
         ],
         'ad_config': {

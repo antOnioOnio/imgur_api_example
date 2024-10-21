@@ -20,4 +20,12 @@ abstract class AppRepositoryContract {
   Future<Result<bool>> deleteGalleryFavorite({
     required DataEntity dataEntity,
   });
+
+  Future<Result<List<String>>> getRecentSearches();
+
+  Future<Result<bool>> storeSearchQuery({required String search});
+
+  Future<Result<bool>> deleteSearchQuery({required String search});
+
+  Future<Result<bool>> deleteSearchHistory();
 }

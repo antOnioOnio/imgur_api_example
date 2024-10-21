@@ -140,4 +140,72 @@ class MockAppRepositoryContract extends _i1.Mock
           ),
         )),
       ) as _i4.Future<_i2.Result<bool>>);
+
+  @override
+  _i4.Future<_i2.Result<List<String>>> getRecentSearches() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getRecentSearches,
+          [],
+        ),
+        returnValue: _i4.Future<_i2.Result<List<String>>>.value(
+            _FakeResult_0<List<String>>(
+          this,
+          Invocation.method(
+            #getRecentSearches,
+            [],
+          ),
+        )),
+      ) as _i4.Future<_i2.Result<List<String>>>);
+
+  @override
+  _i4.Future<_i2.Result<bool>> storeSearchQuery({required String? search}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #storeSearchQuery,
+          [],
+          {#search: search},
+        ),
+        returnValue: _i4.Future<_i2.Result<bool>>.value(_FakeResult_0<bool>(
+          this,
+          Invocation.method(
+            #storeSearchQuery,
+            [],
+            {#search: search},
+          ),
+        )),
+      ) as _i4.Future<_i2.Result<bool>>);
+
+  @override
+  _i4.Future<_i2.Result<bool>> deleteSearchQuery({required String? search}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #deleteSearchQuery,
+          [],
+          {#search: search},
+        ),
+        returnValue: _i4.Future<_i2.Result<bool>>.value(_FakeResult_0<bool>(
+          this,
+          Invocation.method(
+            #deleteSearchQuery,
+            [],
+            {#search: search},
+          ),
+        )),
+      ) as _i4.Future<_i2.Result<bool>>);
+
+  @override
+  _i4.Future<_i2.Result<bool>> deleteSearchHistory() => (super.noSuchMethod(
+        Invocation.method(
+          #deleteSearchHistory,
+          [],
+        ),
+        returnValue: _i4.Future<_i2.Result<bool>>.value(_FakeResult_0<bool>(
+          this,
+          Invocation.method(
+            #deleteSearchHistory,
+            [],
+          ),
+        )),
+      ) as _i4.Future<_i2.Result<bool>>);
 }

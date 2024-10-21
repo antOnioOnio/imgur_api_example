@@ -22,6 +22,7 @@ mixin _$SearchDelegateEvent {
     required TResult Function(String query) deleteQueryFromHistory,
     required TResult Function() deleteHistory,
     required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$SearchDelegateEvent {
     TResult? Function(String query)? deleteQueryFromHistory,
     TResult? Function()? deleteHistory,
     TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$SearchDelegateEvent {
     TResult Function(String query)? deleteQueryFromHistory,
     TResult Function()? deleteHistory,
     TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +52,7 @@ mixin _$SearchDelegateEvent {
     required TResult Function(_DeleteHistory value) deleteHistory,
     required TResult Function(_AddDataEntityToFavorites value)
         handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +61,7 @@ mixin _$SearchDelegateEvent {
     TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult? Function(_DeleteHistory value)? deleteHistory,
     TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +70,7 @@ mixin _$SearchDelegateEvent {
     TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult Function(_DeleteHistory value)? deleteHistory,
     TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -156,6 +162,7 @@ class _$SearchImagesImpl implements _SearchImages {
     required TResult Function(String query) deleteQueryFromHistory,
     required TResult Function() deleteHistory,
     required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
   }) {
     return searchImages(query);
   }
@@ -167,6 +174,7 @@ class _$SearchImagesImpl implements _SearchImages {
     TResult? Function(String query)? deleteQueryFromHistory,
     TResult? Function()? deleteHistory,
     TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
   }) {
     return searchImages?.call(query);
   }
@@ -178,6 +186,7 @@ class _$SearchImagesImpl implements _SearchImages {
     TResult Function(String query)? deleteQueryFromHistory,
     TResult Function()? deleteHistory,
     TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
     required TResult orElse(),
   }) {
     if (searchImages != null) {
@@ -195,6 +204,7 @@ class _$SearchImagesImpl implements _SearchImages {
     required TResult Function(_DeleteHistory value) deleteHistory,
     required TResult Function(_AddDataEntityToFavorites value)
         handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
   }) {
     return searchImages(this);
   }
@@ -206,6 +216,7 @@ class _$SearchImagesImpl implements _SearchImages {
     TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult? Function(_DeleteHistory value)? deleteHistory,
     TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
   }) {
     return searchImages?.call(this);
   }
@@ -217,6 +228,7 @@ class _$SearchImagesImpl implements _SearchImages {
     TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult Function(_DeleteHistory value)? deleteHistory,
     TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
     required TResult orElse(),
   }) {
     if (searchImages != null) {
@@ -308,6 +320,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     required TResult Function(String query) deleteQueryFromHistory,
     required TResult Function() deleteHistory,
     required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
   }) {
     return deleteQueryFromHistory(query);
   }
@@ -319,6 +332,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     TResult? Function(String query)? deleteQueryFromHistory,
     TResult? Function()? deleteHistory,
     TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
   }) {
     return deleteQueryFromHistory?.call(query);
   }
@@ -330,6 +344,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     TResult Function(String query)? deleteQueryFromHistory,
     TResult Function()? deleteHistory,
     TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
     required TResult orElse(),
   }) {
     if (deleteQueryFromHistory != null) {
@@ -347,6 +362,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     required TResult Function(_DeleteHistory value) deleteHistory,
     required TResult Function(_AddDataEntityToFavorites value)
         handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
   }) {
     return deleteQueryFromHistory(this);
   }
@@ -358,6 +374,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult? Function(_DeleteHistory value)? deleteHistory,
     TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
   }) {
     return deleteQueryFromHistory?.call(this);
   }
@@ -369,6 +386,7 @@ class _$DeleteQueryFromHistoryImpl implements _DeleteQueryFromHistory {
     TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult Function(_DeleteHistory value)? deleteHistory,
     TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
     required TResult orElse(),
   }) {
     if (deleteQueryFromHistory != null) {
@@ -430,6 +448,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     required TResult Function(String query) deleteQueryFromHistory,
     required TResult Function() deleteHistory,
     required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
   }) {
     return deleteHistory();
   }
@@ -441,6 +460,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     TResult? Function(String query)? deleteQueryFromHistory,
     TResult? Function()? deleteHistory,
     TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
   }) {
     return deleteHistory?.call();
   }
@@ -452,6 +472,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     TResult Function(String query)? deleteQueryFromHistory,
     TResult Function()? deleteHistory,
     TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
     required TResult orElse(),
   }) {
     if (deleteHistory != null) {
@@ -469,6 +490,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     required TResult Function(_DeleteHistory value) deleteHistory,
     required TResult Function(_AddDataEntityToFavorites value)
         handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
   }) {
     return deleteHistory(this);
   }
@@ -480,6 +502,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult? Function(_DeleteHistory value)? deleteHistory,
     TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
   }) {
     return deleteHistory?.call(this);
   }
@@ -491,6 +514,7 @@ class _$DeleteHistoryImpl implements _DeleteHistory {
     TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult Function(_DeleteHistory value)? deleteHistory,
     TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
     required TResult orElse(),
   }) {
     if (deleteHistory != null) {
@@ -587,6 +611,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     required TResult Function(String query) deleteQueryFromHistory,
     required TResult Function() deleteHistory,
     required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
   }) {
     return handleFavoritePressed(dataEntity);
   }
@@ -598,6 +623,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     TResult? Function(String query)? deleteQueryFromHistory,
     TResult? Function()? deleteHistory,
     TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
   }) {
     return handleFavoritePressed?.call(dataEntity);
   }
@@ -609,6 +635,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     TResult Function(String query)? deleteQueryFromHistory,
     TResult Function()? deleteHistory,
     TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
     required TResult orElse(),
   }) {
     if (handleFavoritePressed != null) {
@@ -626,6 +653,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     required TResult Function(_DeleteHistory value) deleteHistory,
     required TResult Function(_AddDataEntityToFavorites value)
         handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
   }) {
     return handleFavoritePressed(this);
   }
@@ -637,6 +665,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult? Function(_DeleteHistory value)? deleteHistory,
     TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
   }) {
     return handleFavoritePressed?.call(this);
   }
@@ -648,6 +677,7 @@ class _$AddDataEntityToFavoritesImpl implements _AddDataEntityToFavorites {
     TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
     TResult Function(_DeleteHistory value)? deleteHistory,
     TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
     required TResult orElse(),
   }) {
     if (handleFavoritePressed != null) {
@@ -665,6 +695,128 @@ abstract class _AddDataEntityToFavorites implements SearchDelegateEvent {
   @JsonKey(ignore: true)
   _$$AddDataEntityToFavoritesImplCopyWith<_$AddDataEntityToFavoritesImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetRecentSearchesImplCopyWith<$Res> {
+  factory _$$GetRecentSearchesImplCopyWith(_$GetRecentSearchesImpl value,
+          $Res Function(_$GetRecentSearchesImpl) then) =
+      __$$GetRecentSearchesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetRecentSearchesImplCopyWithImpl<$Res>
+    extends _$SearchDelegateEventCopyWithImpl<$Res, _$GetRecentSearchesImpl>
+    implements _$$GetRecentSearchesImplCopyWith<$Res> {
+  __$$GetRecentSearchesImplCopyWithImpl(_$GetRecentSearchesImpl _value,
+      $Res Function(_$GetRecentSearchesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetRecentSearchesImpl implements _GetRecentSearches {
+  const _$GetRecentSearchesImpl();
+
+  @override
+  String toString() {
+    return 'SearchDelegateEvent.getRecentSearches()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetRecentSearchesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String query) searchImages,
+    required TResult Function(String query) deleteQueryFromHistory,
+    required TResult Function() deleteHistory,
+    required TResult Function(DataEntity dataEntity) handleFavoritePressed,
+    required TResult Function() getRecentSearches,
+  }) {
+    return getRecentSearches();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String query)? searchImages,
+    TResult? Function(String query)? deleteQueryFromHistory,
+    TResult? Function()? deleteHistory,
+    TResult? Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult? Function()? getRecentSearches,
+  }) {
+    return getRecentSearches?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String query)? searchImages,
+    TResult Function(String query)? deleteQueryFromHistory,
+    TResult Function()? deleteHistory,
+    TResult Function(DataEntity dataEntity)? handleFavoritePressed,
+    TResult Function()? getRecentSearches,
+    required TResult orElse(),
+  }) {
+    if (getRecentSearches != null) {
+      return getRecentSearches();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_SearchImages value) searchImages,
+    required TResult Function(_DeleteQueryFromHistory value)
+        deleteQueryFromHistory,
+    required TResult Function(_DeleteHistory value) deleteHistory,
+    required TResult Function(_AddDataEntityToFavorites value)
+        handleFavoritePressed,
+    required TResult Function(_GetRecentSearches value) getRecentSearches,
+  }) {
+    return getRecentSearches(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_SearchImages value)? searchImages,
+    TResult? Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
+    TResult? Function(_DeleteHistory value)? deleteHistory,
+    TResult? Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult? Function(_GetRecentSearches value)? getRecentSearches,
+  }) {
+    return getRecentSearches?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_SearchImages value)? searchImages,
+    TResult Function(_DeleteQueryFromHistory value)? deleteQueryFromHistory,
+    TResult Function(_DeleteHistory value)? deleteHistory,
+    TResult Function(_AddDataEntityToFavorites value)? handleFavoritePressed,
+    TResult Function(_GetRecentSearches value)? getRecentSearches,
+    required TResult orElse(),
+  }) {
+    if (getRecentSearches != null) {
+      return getRecentSearches(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetRecentSearches implements SearchDelegateEvent {
+  const factory _GetRecentSearches() = _$GetRecentSearchesImpl;
 }
 
 /// @nodoc

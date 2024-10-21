@@ -10,4 +10,12 @@ abstract class AppLocalDataSourceContract {
   Future<void> deleteGalleryFavorite({
     required DataRemoteEntity dataEntity,
   });
+
+  Future<List<String>> getRecentSearches();
+
+  Future<void> storeSearchQuery({required String search});
+
+  Future<void> deleteSearchQuery({required String search});
+
+  Future<void> deleteSearchHistory();
 }

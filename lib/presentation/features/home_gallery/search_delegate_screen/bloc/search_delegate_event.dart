@@ -14,4 +14,6 @@ class SearchDelegateEvent with _$SearchDelegateEvent {
   const factory SearchDelegateEvent.handleFavoritePressed({
     required DataEntity dataEntity,
   }) = _AddDataEntityToFavorites;
+
+  const factory SearchDelegateEvent.getRecentSearches() = _GetRecentSearches;
 }

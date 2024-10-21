@@ -30,6 +30,7 @@ class SearchDelegateBloc
         },
         handleFavoritePressed: (dataEntity) =>
             _mapHandleFavoritesEventToState(event, emit, dataEntity),
+        getRecentSearches: () => _mapGetRecentSearchesEventToState(event, emit),
       );
     });
   }
@@ -92,14 +93,33 @@ class SearchDelegateBloc
     SearchDelegateEvent event,
     Emitter<SearchDelegateState> emit,
     String query,
-  ) {
-    final updatedSearches = List<String>.from(state.recentSearches)
-      ..remove(query);
+  ) async {
+    final response = await _repository.deleteSearchQuery(search: query);
 
-    emit(
-      state.copyWith(
-        recentSearches: updatedSearches,
-      ),
+    response.when(
+      failure: (e) => emit(state.copyWith(screenStatus: ScreenStatus.error())),
+      success: (_) {
+        final updatedSearches = [...state.recentSearches]..remove(query);
+
+        emit(
+          state.copyWith(
+            recentSearches: updatedSearches,
+          ),
+        );
+      },
+    );
+  }
+
+  FutureOr<void> _mapGetRecentSearchesEventToState(
+    SearchDelegateEvent event,
+    Emitter<SearchDelegateState> emit,
+  ) async {
+    final data = await _repository.getRecentSearches();
+    data.when(
+      failure: (e) =>
+          emit(state.copyWith(screenStatus: const ScreenStatus.error())),
+      success: (recentSearches) =>
+          emit(state.copyWith(recentSearches: recentSearches)),
     );
   }
 }

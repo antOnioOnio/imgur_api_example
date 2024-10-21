@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AppLocalDataSource implements AppLocalDataSourceContract {
   final SharedPreferences sharedPreferencesInstance;
   final String _favoritesKey = 'galleryFavorites';
+  final String _recentSearchesKey = 'recentSearches';
 
   AppLocalDataSource({
     required this.sharedPreferencesInstance,
@@ -42,6 +43,42 @@ class AppLocalDataSource implements AppLocalDataSourceContract {
     final favorites = await getGalleryFavorites();
     favorites.add(dataEntity);
     await _saveFavorites(favorites);
+  }
+
+  @override
+  Future<List<String>> getRecentSearches() async {
+    final jsonString = sharedPreferencesInstance.getString(_recentSearchesKey);
+    if (jsonString != null) {
+      final List<dynamic> jsonList = json.decode(jsonString);
+
+      return jsonList.cast<String>();
+    }
+
+    return [];
+  }
+
+  @override
+  Future<void> storeSearchQuery({required String search}) async {
+    final recentSearches = await getRecentSearches();
+    if (!recentSearches.contains(search)) {
+      recentSearches.add(search);
+      final jsonString = json.encode(recentSearches);
+      await sharedPreferencesInstance.setString(_recentSearchesKey, jsonString);
+    }
+  }
+
+  @override
+  Future<void> deleteSearchHistory() async{
+    await sharedPreferencesInstance.remove(_recentSearchesKey);
+
+  }
+
+  @override
+  Future<void> deleteSearchQuery({required String search}) async{
+    final recentSearches = await getRecentSearches();
+    recentSearches.remove(search);
+    final jsonString = json.encode(recentSearches);
+    await sharedPreferencesInstance.setString(_recentSearchesKey, jsonString);
   }
 
   Future<void> _saveFavorites(List<DataRemoteEntity> favorites) async {

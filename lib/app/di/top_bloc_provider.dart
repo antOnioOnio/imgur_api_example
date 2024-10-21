@@ -27,7 +27,8 @@ class TopBlocProviders extends StatelessWidget {
           create: (context) => _getIt<HomeGalleryScreenBloc>(),
         ),
         BlocProvider(
-          create: (context) => _getIt<SearchDelegateBloc>(),
+          create: (context) => _getIt<SearchDelegateBloc>()
+            ..add(const SearchDelegateEvent.getRecentSearches()),
         ),
         BlocProvider(
           create: (context) =>

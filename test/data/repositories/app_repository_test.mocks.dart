@@ -136,4 +136,47 @@ class MockAppLocalDataSourceContract extends _i1.Mock
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),
       ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<List<String>> getRecentSearches() => (super.noSuchMethod(
+        Invocation.method(
+          #getRecentSearches,
+          [],
+        ),
+        returnValue: _i4.Future<List<String>>.value(<String>[]),
+      ) as _i4.Future<List<String>>);
+
+  @override
+  _i4.Future<void> storeSearchQuery({required String? search}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #storeSearchQuery,
+          [],
+          {#search: search},
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> deleteSearchQuery({required String? search}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #deleteSearchQuery,
+          [],
+          {#search: search},
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
+  _i4.Future<void> deleteSearchHistory() => (super.noSuchMethod(
+        Invocation.method(
+          #deleteSearchHistory,
+          [],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
 }
