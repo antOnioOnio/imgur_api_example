@@ -97,7 +97,6 @@ extension ImageRemoteEntityX on ImageRemoteEntity {
       mp4: mp4,
       gifv: gifv,
       hls: hls,
-      processing: processing?.toEntity(),
       commentCount: commentCount,
       favoriteCount: favoriteCount,
       ups: ups,
@@ -156,4 +155,113 @@ extension SearchGalleryRequestExtension on SearchGalleryRequest {
         page: page,
         query: query,
       );
+}
+
+extension DataEntityX on DataEntity {
+  DataRemoteEntity toRemoteEntity() {
+    return DataRemoteEntity(
+      id: id,
+      title: title,
+      description: description,
+      datetime: datetime,
+      cover: cover,
+      coverWidth: coverWidth,
+      coverHeight: coverHeight,
+      accountUrl: accountUrl,
+      accountId: accountId,
+      privacy: privacy,
+      layout: layout,
+      views: views,
+      link: link,
+      ups: ups,
+      downs: downs,
+      points: points,
+      score: score,
+      isAlbum: isAlbum,
+      vote: vote,
+      favorite: favorite,
+      nsfw: nsfw,
+      section: section,
+      commentCount: commentCount,
+      favoriteCount: favoriteCount,
+      topic: topic,
+      topicId: topicId,
+      imagesCount: imagesCount,
+      inGallery: inGallery,
+      isAd: isAd,
+      tags: tags?.map((e) => e.toRemoteEntity()).toList(),
+      adType: adType,
+      adUrl: adUrl,
+      inMostViral: inMostViral,
+      includeAlbumAds: includeAlbumAds,
+      images: images?.map((e) => e.toRemoteEntity()).toList(),
+      adConfig: adConfig?.toRemoteEntity(),
+    );
+  }
+}
+
+extension TagEntityX on TagEntity {
+  TagRemoteEntity toRemoteEntity() {
+    return TagRemoteEntity(
+        // Asume que TagRemoteEntity tiene los mismos campos que TagEntity
+        // y mapea los campos correspondientes aquí
+        );
+  }
+}
+
+extension ImageEntityX on ImageEntity {
+  ImageRemoteEntity toRemoteEntity() {
+    return ImageRemoteEntity(
+      id: id,
+      title: title,
+      description: description,
+      datetime: datetime,
+      type: type,
+      animated: animated,
+      width: width,
+      height: height,
+      size: size,
+      views: views,
+      bandwidth: bandwidth,
+      vote: vote,
+      favorite: favorite,
+      nsfw: nsfw,
+      section: section,
+      accountUrl: accountUrl,
+      accountId: accountId,
+      isAd: isAd,
+      inMostViral: inMostViral,
+      hasSound: hasSound,
+      tags: tags?.map((e) => e.toRemoteEntity()).toList(),
+      adType: adType,
+      adUrl: adUrl,
+      edited: edited,
+      inGallery: inGallery,
+      link: link ?? '',
+      mp4Size: mp4Size,
+      mp4: mp4,
+      gifv: gifv,
+      hls: hls,
+      commentCount: commentCount,
+      favoriteCount: favoriteCount,
+      ups: ups,
+      downs: downs,
+      points: points,
+      score: score,
+    );
+  }
+}
+
+extension AdConfigEntityX on AdConfigEntity {
+  AdConfigRemoteEntity toRemoteEntity() {
+    return AdConfigRemoteEntity(
+      safeFlags: safeFlags,
+      highRiskFlags: highRiskFlags,
+      unsafeFlags: unsafeFlags,
+      wallUnsafeFlags: wallUnsafeFlags,
+      showsAds: showsAds,
+      showAdLevel: showAdLevel,
+      nsfwScore: nsfwScore,
+    );
+  }
 }

@@ -30,7 +30,8 @@ class TopBlocProviders extends StatelessWidget {
           create: (context) => _getIt<SearchDelegateBloc>(),
         ),
         BlocProvider(
-          create: (context) => _getIt<FavBloc>(),
+          create: (context) =>
+              _getIt<FavBloc>()..add(const FavEvent.loadFavorites()),
         ),
       ],
       child: child,

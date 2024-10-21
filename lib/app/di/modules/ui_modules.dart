@@ -17,6 +17,6 @@ void _uiModulesInit() {
     ),
   );
   uiModulesDi.registerFactory(
-    () => FavBloc(),
+    () => FavBloc(repositoryContract: uiModulesDi()),
   );
 }

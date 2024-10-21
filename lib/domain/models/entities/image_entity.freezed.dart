@@ -46,7 +46,6 @@ mixin _$ImageEntity {
   String? get mp4 => throw _privateConstructorUsedError;
   String? get gifv => throw _privateConstructorUsedError;
   String? get hls => throw _privateConstructorUsedError;
-  ProcessingEntity? get processing => throw _privateConstructorUsedError;
   int? get commentCount => throw _privateConstructorUsedError;
   int? get favoriteCount => throw _privateConstructorUsedError;
   int? get ups => throw _privateConstructorUsedError;
@@ -96,15 +95,12 @@ abstract class $ImageEntityCopyWith<$Res> {
       String? mp4,
       String? gifv,
       String? hls,
-      ProcessingEntity? processing,
       int? commentCount,
       int? favoriteCount,
       int? ups,
       int? downs,
       int? points,
       int? score});
-
-  $ProcessingEntityCopyWith<$Res>? get processing;
 }
 
 /// @nodoc
@@ -150,7 +146,6 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
     Object? mp4 = freezed,
     Object? gifv = freezed,
     Object? hls = freezed,
-    Object? processing = freezed,
     Object? commentCount = freezed,
     Object? favoriteCount = freezed,
     Object? ups = freezed,
@@ -279,10 +274,6 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
           ? _value.hls
           : hls // ignore: cast_nullable_to_non_nullable
               as String?,
-      processing: freezed == processing
-          ? _value.processing
-          : processing // ignore: cast_nullable_to_non_nullable
-              as ProcessingEntity?,
       commentCount: freezed == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
@@ -308,18 +299,6 @@ class _$ImageEntityCopyWithImpl<$Res, $Val extends ImageEntity>
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ProcessingEntityCopyWith<$Res>? get processing {
-    if (_value.processing == null) {
-      return null;
-    }
-
-    return $ProcessingEntityCopyWith<$Res>(_value.processing!, (value) {
-      return _then(_value.copyWith(processing: value) as $Val);
-    });
   }
 }
 
@@ -362,16 +341,12 @@ abstract class _$$ImageEntityImplCopyWith<$Res>
       String? mp4,
       String? gifv,
       String? hls,
-      ProcessingEntity? processing,
       int? commentCount,
       int? favoriteCount,
       int? ups,
       int? downs,
       int? points,
       int? score});
-
-  @override
-  $ProcessingEntityCopyWith<$Res>? get processing;
 }
 
 /// @nodoc
@@ -415,7 +390,6 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
     Object? mp4 = freezed,
     Object? gifv = freezed,
     Object? hls = freezed,
-    Object? processing = freezed,
     Object? commentCount = freezed,
     Object? favoriteCount = freezed,
     Object? ups = freezed,
@@ -544,10 +518,6 @@ class __$$ImageEntityImplCopyWithImpl<$Res>
           ? _value.hls
           : hls // ignore: cast_nullable_to_non_nullable
               as String?,
-      processing: freezed == processing
-          ? _value.processing
-          : processing // ignore: cast_nullable_to_non_nullable
-              as ProcessingEntity?,
       commentCount: freezed == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
@@ -610,7 +580,6 @@ class _$ImageEntityImpl implements _ImageEntity {
       required this.mp4,
       required this.gifv,
       required this.hls,
-      required this.processing,
       required this.commentCount,
       required this.favoriteCount,
       required this.ups,
@@ -688,8 +657,6 @@ class _$ImageEntityImpl implements _ImageEntity {
   @override
   final String? hls;
   @override
-  final ProcessingEntity? processing;
-  @override
   final int? commentCount;
   @override
   final int? favoriteCount;
@@ -704,7 +671,7 @@ class _$ImageEntityImpl implements _ImageEntity {
 
   @override
   String toString() {
-    return 'ImageEntity(id: $id, title: $title, description: $description, datetime: $datetime, type: $type, animated: $animated, width: $width, height: $height, size: $size, views: $views, bandwidth: $bandwidth, vote: $vote, favorite: $favorite, nsfw: $nsfw, section: $section, accountUrl: $accountUrl, accountId: $accountId, isAd: $isAd, inMostViral: $inMostViral, hasSound: $hasSound, tags: $tags, adType: $adType, adUrl: $adUrl, edited: $edited, inGallery: $inGallery, link: $link, mp4Size: $mp4Size, mp4: $mp4, gifv: $gifv, hls: $hls, processing: $processing, commentCount: $commentCount, favoriteCount: $favoriteCount, ups: $ups, downs: $downs, points: $points, score: $score)';
+    return 'ImageEntity(id: $id, title: $title, description: $description, datetime: $datetime, type: $type, animated: $animated, width: $width, height: $height, size: $size, views: $views, bandwidth: $bandwidth, vote: $vote, favorite: $favorite, nsfw: $nsfw, section: $section, accountUrl: $accountUrl, accountId: $accountId, isAd: $isAd, inMostViral: $inMostViral, hasSound: $hasSound, tags: $tags, adType: $adType, adUrl: $adUrl, edited: $edited, inGallery: $inGallery, link: $link, mp4Size: $mp4Size, mp4: $mp4, gifv: $gifv, hls: $hls, commentCount: $commentCount, favoriteCount: $favoriteCount, ups: $ups, downs: $downs, points: $points, score: $score)';
   }
 
   @override
@@ -752,8 +719,6 @@ class _$ImageEntityImpl implements _ImageEntity {
             (identical(other.mp4, mp4) || other.mp4 == mp4) &&
             (identical(other.gifv, gifv) || other.gifv == gifv) &&
             (identical(other.hls, hls) || other.hls == hls) &&
-            (identical(other.processing, processing) ||
-                other.processing == processing) &&
             (identical(other.commentCount, commentCount) ||
                 other.commentCount == commentCount) &&
             (identical(other.favoriteCount, favoriteCount) ||
@@ -797,7 +762,6 @@ class _$ImageEntityImpl implements _ImageEntity {
         mp4,
         gifv,
         hls,
-        processing,
         commentCount,
         favoriteCount,
         ups,
@@ -845,7 +809,6 @@ abstract class _ImageEntity implements ImageEntity {
       required final String? mp4,
       required final String? gifv,
       required final String? hls,
-      required final ProcessingEntity? processing,
       required final int? commentCount,
       required final int? favoriteCount,
       required final int? ups,
@@ -913,8 +876,6 @@ abstract class _ImageEntity implements ImageEntity {
   String? get gifv;
   @override
   String? get hls;
-  @override
-  ProcessingEntity? get processing;
   @override
   int? get commentCount;
   @override

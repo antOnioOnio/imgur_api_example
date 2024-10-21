@@ -41,10 +41,6 @@ _$ImageRemoteEntityImpl _$$ImageRemoteEntityImplFromJson(
       mp4: json['mp4'] as String?,
       gifv: json['gifv'] as String?,
       hls: json['hls'] as String?,
-      processing: json['processing'] == null
-          ? null
-          : ProcessingRemoteEntity.fromJson(
-              json['processing'] as Map<String, dynamic>),
       commentCount: (json['commentCount'] as num?)?.toInt(),
       favoriteCount: (json['favoriteCount'] as num?)?.toInt(),
       ups: (json['ups'] as num?)?.toInt(),
@@ -86,7 +82,6 @@ Map<String, dynamic> _$$ImageRemoteEntityImplToJson(
       'mp4': instance.mp4,
       'gifv': instance.gifv,
       'hls': instance.hls,
-      'processing': instance.processing,
       'commentCount': instance.commentCount,
       'favoriteCount': instance.favoriteCount,
       'ups': instance.ups,

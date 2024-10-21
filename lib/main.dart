@@ -9,9 +9,9 @@ import 'package:igmur_images_example/app/di/di.dart' as app_di;
 import 'package:igmur_images_example/app/di/top_bloc_provider.dart';
 import 'package:igmur_images_example/app/routes/app_routes.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  app_di.initDi();
+  await app_di.initDi();
   runApp(MyApp());
 }
 

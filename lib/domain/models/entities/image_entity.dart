@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:igmur_images_example/domain/models/entities/processing_entity.dart';
 import 'package:igmur_images_example/domain/models/entities/tag_entity.dart';
 
 part 'image_entity.freezed.dart';
@@ -37,7 +36,6 @@ class ImageEntity with _$ImageEntity {
     required String? mp4,
     required String? gifv,
     required String? hls,
-    required ProcessingEntity? processing,
     required int? commentCount,
     required int? favoriteCount,
     required int? ups,

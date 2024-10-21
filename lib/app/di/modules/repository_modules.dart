@@ -6,6 +6,7 @@ void _repositoryModulesInit() {
   repositoryModulesDi.registerLazySingleton<AppRepositoryContract>(
     () => AppRepository(
       repositoryModulesDi(),
+      repositoryModulesDi(),
     ),
   );
 }

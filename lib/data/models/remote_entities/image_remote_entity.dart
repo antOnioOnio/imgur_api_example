@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:igmur_images_example/data/models/remote_entities/processing_remote_entity.dart';
 import 'package:igmur_images_example/data/models/remote_entities/tag_remote_entity.dart';
 
 part 'image_remote_entity.freezed.dart';
@@ -38,7 +37,6 @@ class ImageRemoteEntity with _$ImageRemoteEntity {
     required String? mp4,
     required String? gifv,
     required String? hls,
-    required ProcessingRemoteEntity? processing,
     required int? commentCount,
     required int? favoriteCount,
     required int? ups,
