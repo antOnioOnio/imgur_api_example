@@ -79,22 +79,10 @@ class HomeGalleryScreenBloc
     Emitter<HomeGalleryScreenState> emit,
     DataEntity dataEntity,
   ) {
-    //logic to update favorite list with its correct new item
-    final wasFavorite = state.dataEntityListFavorites.contains(dataEntity);
-    var newFavoriteList = [...state.dataEntityListFavorites];
-
-    if (wasFavorite) {
-      newFavoriteList = state.dataEntityListFavorites
-          .where((entity) => entity.id != dataEntity.id)
-          .toList();
-    } else {
-      newFavoriteList.add(dataEntity.copyWith(favorite: true));
-    }
-
-    //logic to update response list with its correct new item updated
+    final newFavValue = dataEntity.favorite == true ? false : true;
     final updatedList = state.dataEntityListResponse.map((entity) {
       if (entity == dataEntity) {
-        return entity.copyWith(favorite: !wasFavorite);
+        return entity.copyWith(favorite: newFavValue);
       }
 
       return entity;
@@ -102,7 +90,6 @@ class HomeGalleryScreenBloc
 
     emit(
       state.copyWith(
-        dataEntityListFavorites: newFavoriteList,
         dataEntityListResponse: updatedList,
       ),
     );

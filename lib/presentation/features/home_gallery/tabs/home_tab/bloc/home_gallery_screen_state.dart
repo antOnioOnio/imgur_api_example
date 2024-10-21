@@ -5,7 +5,6 @@ class HomeGalleryScreenState with _$HomeGalleryScreenState {
   const factory HomeGalleryScreenState({
     required ScreenStatus screenStatus,
     required List<DataEntity> dataEntityListResponse,
-    required List<DataEntity> dataEntityListFavorites,
     required int currentPage,
   }) = _HomeGalleryScreenState;
 
@@ -13,7 +12,6 @@ class HomeGalleryScreenState with _$HomeGalleryScreenState {
     return const HomeGalleryScreenState(
       screenStatus: ScreenStatus.initial(),
       dataEntityListResponse: [],
-      dataEntityListFavorites: [],
       currentPage: 0,
     );
   }
