@@ -98,3 +98,7 @@ This project uses **Flutter 3.16.7**.
 
 To ensure compatibility, make sure you are using this version of Flutter or a compatible one. You
 can check your current Flutter version by running: `flutter --version`.
+
+## Code Generation
+
+To utilize this project, it is necessary to generate certain files using `build_runner`. This is because the project employs packages like `freezed` and `json_serializable` that require additional code generation. To generate these files, run the following command in the root of the project:
