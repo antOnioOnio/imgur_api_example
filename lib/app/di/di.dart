@@ -25,7 +25,7 @@ part 'modules/ui_modules.dart';
 Future<void> initDi() async {
   _apiModulesInit();
   _remoteModulesInit();
-  _repositoryModulesInit();
   _localModulesInit(instance: await SharedPreferences.getInstance());
+  _repositoryModulesInit();
   _uiModulesInit();
 }

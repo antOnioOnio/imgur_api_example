@@ -91,7 +91,7 @@ This Flutter project serves as a comprehensive example of how to:
 ## Demo Video
 
 [Watch the demonstration video](./assets/video/readme_video.mp4)
-
+,
 ## Flutter Version
 
 This project uses **Flutter 3.16.7**.

@@ -27,3 +27,4 @@ abstract class AppApi {
     @Query('q') String query,
   );
 }
+
